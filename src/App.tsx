@@ -28,7 +28,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='react-myportfolio'>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Main portfolioList={portfolioList} />}>
