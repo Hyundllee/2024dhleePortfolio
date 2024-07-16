@@ -28,7 +28,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <BrowserRouter basename='portfolio2024'>
+    <BrowserRouter basename='/'>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Main portfolioList={portfolioList} />}>
