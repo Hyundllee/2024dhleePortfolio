@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Hyundllee.github.io/react-myportfolio",
+  "homepage": "https://Hyundllee.github.io/mainPortfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -36,6 +36,7 @@
     "gh-pages": "^6.1.1",
     "sass": "^1.77.6",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }
