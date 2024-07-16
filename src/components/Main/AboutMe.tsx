@@ -8,7 +8,7 @@ const AboutMe = () => {
       <div className='inner'>
         <div className='aboutMe_con'>
           <div className='profile'>
-              <img src="/portfolio2024/src/assets/images/profile.png" alt="프로필이미지"/>
+              <img src="assets/images/profile.png" alt="프로필이미지"/>
           </div>
           <div className='aboutText'>
             <h2 className='h2tit'>About Me</h2>
