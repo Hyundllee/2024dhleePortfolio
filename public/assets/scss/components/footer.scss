@@ -1,0 +1,197 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: #E0ECF8;
+  .inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 80px 0 120px 0;
+      .footerTop {
+          h2 {
+              font-size: 42px;
+              font-family: 'ChalkboardSE';
+              color: $basic-color;
+          }
+
+          .highlight_circle > p {
+              position: relative;
+              z-index: 1;
+              font-size: 44px;
+              margin-top: 30px;
+              line-height: 62px;
+              color: $basic-color;
+              font-weight: 400;
+              @include tablet-screen {
+                font-size: 32px;
+                line-height: 48px;
+              }
+              @include mob--screen {
+                font-size: 26px;
+                line-height: 42px;
+              }
+          }
+      }
+      @include td-screen {
+        padding: 70px 40px;
+      }
+      @include mob--screen {
+        padding: 70px 15px;
+      }
+  }
+
+  .footerMid {
+      > p {
+          font-size: 25px;
+          line-height: 37px;
+          color: $basic-color;
+          margin-top: 25px;
+          @include tablet-screen {
+            font-size: 22px;
+            line-height: 32px;
+          }
+          @include mob--screen {
+            font-size: 18px;
+            line-height: 28px;
+          }
+      }
+
+      .contact {
+          > ul {
+              display: flex;
+              margin-top: 40px;
+              @include mob--screen {
+                flex-direction: column;
+                margin-top: 25px;
+              }
+              > li {
+                  display: flex;
+                  border: 1px solid $basic-color;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 25px;
+                  width: 50%;
+                  height: 200px;
+                  @include tablet-screen {
+                    height: 165px;
+                  }
+                  @include mob--screen {
+                    height: 110px;
+                    width: 100%;
+                    gap: 15px;
+                  }
+                  + li {
+                      border-left: 0;
+                      @include mob--screen {
+                        border-left: 1px solid $basic-color;
+                        border-top: 0;
+                      }
+                  }
+
+                  > span {
+                      font-weight: 500;
+                      font-size: 32px;
+                      color: $basic-color;
+                      @include tablet-screen {
+                        font-size: 24px;
+                      }
+                      @include mob--screen {
+                        font-size: 20px;
+                      }
+                      .fa-paper-plane {
+                          font-size: 30px;
+                          margin-right: 2px;
+                          @include tablet-screen {
+                            font-size: 24px;
+                          }
+                          @include mob--screen {
+                            font-size: 18px;
+                          }
+                      }
+
+                      .fa-phone-volume {
+                          font-size: 30px;
+                          @include tablet-screen {
+                            font-size: 24px;
+                          }
+                          @include mob--screen {
+                            font-size: 18px;
+                          }
+                      }
+                  }
+
+                  > a {
+                      font-weight: 500;
+                      font-size: 24px;
+                      color: $basic-color;
+                      @include tablet-screen {
+                        font-size: 20px;
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  .footerBtm {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      > p {
+        @include mob--screen {
+            font-size: 13px;
+          }
+      }
+  }
+
+  .highlight_circle {
+      position: relative;
+
+      .wrap_svg {
+          position: absolute;
+          z-index: 2;
+          left: -29px;
+          height: auto;
+          bottom: -24px;
+          @include mob--screen {
+            left: -15px;
+            bottom: -13px;
+          }
+          .circle {
+              height: 85px;
+              @include tablet-screen {
+                height: 65px;
+              }
+              @include mob--screen {
+                height: 50px;
+              }
+          }
+
+          path {
+              stroke-dasharray: 1800;
+              stroke-dashoffset: 1800;
+              stroke: #fc0;
+              stroke-width: 3;
+              animation: none; // 초기에는 애니메이션이 없도록 설정
+          }
+      }
+  }
+
+  &.animate {
+      .highlight_circle path {
+          animation: draw 1s 0.4s linear forwards;
+      }
+  }
+
+  @keyframes draw {
+      to {
+          stroke-dashoffset: 0;
+      }
+  }
+}
