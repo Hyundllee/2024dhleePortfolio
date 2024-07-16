@@ -3,8 +3,22 @@ import { useEffect, useRef, useState } from "react";
 const Intro = () => {
   const bgtext = useRef<HTMLParagraphElement>(null);
   const textAnimationRef = useRef<HTMLParagraphElement>(null);
-  const [count1, setCount1] = useState<number>(0);
+  const [, setCount1] = useState<number>(0);
   const animationRef = useRef<number | null>(null);
+
+  const updateCount = () => {
+    setCount1((count1) => {
+      let newCount = count1 + 1;
+      if (bgtext.current && newCount > bgtext.current.scrollWidth / 2) {
+        bgtext.current.style.transform = 'translateX(0)';
+        newCount = 0;
+      }
+      if (bgtext.current) {
+        bgtext.current.style.transform = `translateX(${newCount * -1}px)`; 
+      }
+      return newCount;
+    });
+  };
 
   useEffect(() => {
     const textArr1 = 'DONGHYUNLEE PORTFOLIO DONGHYUNLEE PORTFOLIO DONGHYUNLEE PORTFOLIO'.split('  ');
@@ -22,25 +36,14 @@ const Intro = () => {
     }
 
     const animate = () => {
-      setCount1(count => {
-        let newCount = count + 1;
-        if (bgtext.current && newCount > bgtext.current.scrollWidth / 2) {
-          bgtext.current.style.transform = 'translateX(0)';
-          newCount = 0;
-        }
-        if (bgtext.current) {
-          bgtext.current.style.transform = `translateX(${newCount * -1}px)`; 
-        }
-        return newCount;
-      });
-
+      updateCount();
       animationRef.current = requestAnimationFrame(animate); 
     };
 
     animationRef.current = requestAnimationFrame(animate); 
 
     const handleScroll = () => {
-      setCount1(count => count + 10);
+      setCount1((count1) => count1 + 10);
     };
 
     window.addEventListener('scroll', handleScroll);
