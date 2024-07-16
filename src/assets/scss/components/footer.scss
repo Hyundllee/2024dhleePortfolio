@@ -32,6 +32,11 @@
                 font-size: 26px;
                 line-height: 42px;
               }
+              @media screen and (max-width: 420px) {
+                font-size: 20px;
+                line-height: 33px;
+
+              }
           }
       }
       @include td-screen {
@@ -55,6 +60,11 @@
           @include mob--screen {
             font-size: 18px;
             line-height: 28px;
+          }
+          @media screen and (max-width: 420px) {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 18px;
           }
       }
 
@@ -155,13 +165,16 @@
 
       .wrap_svg {
           position: absolute;
-          z-index: 2;
+          // z-index: 2;
           left: -29px;
           height: auto;
-          bottom: -24px;
+          bottom: -19px;
           @include mob--screen {
             left: -15px;
             bottom: -13px;
+          }
+          @media screen and (max-width: 420px) {
+            bottom: -14px;
           }
           .circle {
               height: 85px;
@@ -170,6 +183,9 @@
               }
               @include mob--screen {
                 height: 50px;
+              }
+              @media screen and (max-width: 420px) {
+                height: 45px;
               }
           }
 
