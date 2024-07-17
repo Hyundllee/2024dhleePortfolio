@@ -378,12 +378,6 @@ h2.h2tit {
             .aboutText {
                 text-align: left;
                 margin-top: 12px;
-                @include tablet-screen  {
-                    width: 100%;
-                    br {
-                    display: none;
-                    }
-                }
                 .textBox {
                     padding-bottom: 30px;
                     border-bottom: 1px solid $basic-color;
@@ -405,6 +399,14 @@ h2.h2tit {
                         }
                         @include mob--screen {
                             line-height: 24px;
+                        }
+                        br {
+                            display: none;
+                        }
+                        &:first-child > br:first-child {
+                            @include tablet-screen  {
+                                display: block;
+                            }
                         }
                     }
                     @include td-screen {
@@ -599,6 +601,9 @@ h2.h2tit {
     @include tablet-screen {
         margin-bottom: 80px;
     }
+    @include mob--screen {
+        margin-bottom: 50px;
+    }
     .inner {
         @include td-screen {
             padding: 0 40px;
@@ -761,6 +766,17 @@ h2.h2tit {
                     padding-top: 4px;
                     height: 206px;
                     overflow-y: auto;
+                    &::-webkit-scrollbar  {
+                        width: 5px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        height: 30%; 
+                        background: #ddd;
+                        border-radius: 10px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: transparent; 
+                    }
                     @include mob--screen {
                         height: 147px;
                     }
