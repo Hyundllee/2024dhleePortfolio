@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* 테블릿 ~ 데스크탑 */
+/* 태블릿 선언 */
+/* 모바일 선언 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: 0;
+  padding: 0;
+}
+
+/* Pretendard */
+@font-face {
+  font-family: "Pretendard";
+  src: url("/src/assets/font/Pretendard-Regular.eot") format("eot"), url("/src/assets/font/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/src/assets/font/Pretendard-Medium.eot") format("eot"), url("/src/assets/font/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/src/assets/font/Pretendard-SemiBold.eot") format("eot"), url("/src/assets/font/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/src/assets/font/Pretendard-Bold.eot") format("eot"), url("/src/assets/font/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/* GmarketSans */
+@font-face {
+  font-family: "GmarketSans";
+  src: url("/src/assets/font/GmarketSansLight.eot") format("eot"), url("/src/assets/font/GmarketSansLight.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("/src/assets/font/GmarketSansMedium.eot") format("eot"), url("/src/assets/font/GmarketSansMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("/src/assets/font/GmarketSansBold.eot") format("eot"), url("/src/assets/font/GmarketSansBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* ChalkboardSE */
+@font-face {
+  font-family: "ChalkboardSE";
+  src: url("/src/assets/font/ChalkboardSE-Regular.eot") format("eot"), url("/src/assets/font/ChalkboardSE-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ChalkboardSE";
+  src: url("/src/assets/font/ChalkboardSE-Bold.eot") format("eot"), url("/src/assets/font/ChalkboardSE-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* Montserrat */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/font/Montserrat-Regular.eot") format("eot"), url("/src/assets/font/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/font/Montserrat-Medium.eot") format("eot"), url("/src/assets/font/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/font/Montserrat-Bold.eot") format("eot"), url("/src/assets/font/Montserrat-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* SCDream */
+@font-face {
+  font-family: "SCDream";
+  src: url("/src/assets/font/SCDream4.eot") format("eot"), url("/src/assets/font/SCDream4.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SCDream";
+  src: url("/src/assets/font/SCDream5.eot") format("eot"), url("/src/assets/font/SCDream5.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.wrapper {
+  padding-top: 83px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding-top: 62px;
+  }
+}

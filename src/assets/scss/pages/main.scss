@@ -70,7 +70,7 @@ h2.highlightFont {
         height: 300px;
         filter: blur(100px);
         position: fixed;
-        z-index: 2;
+        z-index: -1;
     }
     .bg-primary {
         background-color: #bdffd4;
