@@ -87,14 +87,14 @@ const Intro = () => {
           </div>
           <div className="subText">
             <p>
-              방문해주셔서 감사합니다.<br />
-              2021년 UI 개발을 시작으로 모든 사용자들에게 평등하게 언제든 공간에 제약없이 <br/>
+              안녕하십니까 <span className="highlightFont">이동현</span>입니다.<br />
+              2021년 UI 개발을 시작으로 끊임없이 모든 사용자들에게 평등하게 언제든 공간에 제약없이 <br/>
               서비스를 제공해줄 수 있는 이 일에 매료된 순간부터 자부심을 갖고 <br/>
               오늘도 열정적인 마음을 담아 개발하고 있습니다! <br/>
             </p>
-            <p className="myName">
+            {/* <p className="myName">
               - Donghyun Lee -
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="scrollBar">

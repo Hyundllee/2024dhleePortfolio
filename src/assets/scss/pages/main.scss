@@ -1,4 +1,25 @@
 // Intro
+.highlightFont {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-color: #b2ffcd;
+        z-index: -1;
+    }
+}
+h2.highlightFont {
+    &::after {
+        height: 50%;
+    }
+}
+
 .Intro {
     width: 100%;
     background-color: var(--background-Color);
@@ -20,7 +41,7 @@
             font-size: 185px;
             white-space: nowrap;
             color: rgba(54,84,134,0.05);
-            font-family: 'ChalkboardSE';
+            font-family: 'GmarketSans';
             font-weight: 600;
             @include td-screen {
                 font-size: 15vw;
@@ -42,7 +63,7 @@
         animation: two 10s infinite;
     }
     .opacity-50 {
-        opacity: .5;
+        opacity: .7;
     }
     .bg-blur {
         width: 300px;
@@ -52,10 +73,10 @@
         z-index: 2;
     }
     .bg-primary {
-        background-color: #5594D3;
+        background-color: #bdffd4;
     }
     .bg-teal {
-        background-color: #AFBFF5;
+        background-color: #bdfaf0;
     }
     .introInner {
         position: relative;
@@ -80,8 +101,9 @@
                 > p {
                     color: $basic-color;
                     font-size: 80px;
-                    font-family: 'ChalkboardSE';
-                    font-weight: 400;
+                    font-family: 'GmarketSans';
+                    font-weight: 600;
+                    letter-spacing: -0.02em;
                     opacity: 0; 
                     &.text-animation span {
                         opacity: 0; animation: 600ms ease-in-out 0s 1 normal forwards running fade;
@@ -98,26 +120,27 @@
                         font-size: 52px; 
                     }
                     @include mob--screen {
-                        font-size: 9vw; 
+                        font-size: 7vw; 
                     }
                 }
                 > h2 {
                     animation: 0.6s ease-in-out 1.7s normal forwards running fade; opacity: 0;
                     color: $basic-color;
-                    font-size: 120px;
-                    font-family: 'ChalkboardSE';
+                    font-size: 80px;
+                    letter-spacing: -0.02em;
+                    font-family: 'GmarketSans';
                     font-weight: 600;
                     white-space: nowrap;
                     margin: 15px 0 80px 0;
                     @include td-screen {
-                        font-size: 9vw;
+                        font-size: 7vw;
                     }
                     @include tablet-screen {
-                        font-size: 72px; 
+                        font-size: 52px; 
                         margin: 15px 0 50px 0;
                     }
                     @include mob--screen {
-                        font-size: 9.5vw; 
+                        font-size: 7vw; 
                         margin: 15px 0 30px 0;
                     }
                 }
@@ -127,6 +150,8 @@
                 > p:first-child {
                     color: $basic-color;
                     font-size: 21px;
+                    font-family: 'Pretendard';
+                    font-weight: 400;
                     line-height: 1.8;
                     padding-left: 5px;
                     @include td-screen {
@@ -140,9 +165,6 @@
                         font-size: 15px;
                         line-height: 26px;
                         padding-left: 0;
-                        > br:not(:first-child) {
-                            display: none;
-                        }
                     }
                 }
                 .myName {
@@ -259,9 +281,9 @@
 
 // AboutMe 
 h2.h2tit {
-    font-size: 42px;
-    font-family: 'ChalkboardSE';
-    font-weight: 400;
+    font-size: 30px;
+    font-family: 'GmarketSans';
+    font-weight: 600;
     margin-bottom: 30px;
     @include tablet-screen {
         text-align: center;
@@ -273,9 +295,7 @@ h2.h2tit {
 .AboutMe {
     position: relative;
     z-index: 1;
-    background: $bg-color2;
-    padding-bottom: 250px;
-    margin-top: 150px;
+    padding-bottom: 125px;
     width: 100%;
     @include tablet-screen {
         padding-bottom: 120px;
@@ -284,54 +304,19 @@ h2.h2tit {
         margin-top: 120px;
         padding-bottom: 85px;
     }
-    &::after {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        top: -150px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-top: 75px solid transparent;
-        border-bottom: 75px solid $bg-color2;
-        border-left: 50vw solid $bg-color2;
-        border-right: 50vw solid transparent;
-        @include td-screen {
-            top: -100px;
-            border-top: 50px solid transparent;
-            border-bottom: 50px solid $bg-color2;
-            border-left: 50vw solid $bg-color2;
-            border-right: 50vw solid transparent;
-        }
-        @include tablet-screen {
-            top: -60px;
-            border-top: 30px solid transparent;
-            border-bottom: 30px solid $bg-color2;
-            border-left: 50vw solid $bg-color2;
-            border-right: 50vw solid transparent;
-        }
-        @include mob--screen {
-            top: -40px;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid $bg-color2;
-            border-left: 50vw solid $bg-color2;
-            border-right: 50vw solid transparent;
-        }
-    }
     .inner {
         position: relative;
         z-index: 5;
         max-width: 1300px;
         margin: 0 auto;
-        padding-top: 85px;
+        padding-top: 125px;
         text-align: center;
         .aboutMe_con {
             width: 100%;
             display: flex;
             justify-content: center;
-            gap: 80px;
+            gap: 75px;
             @include tablet-screen {
-                padding-top: 30px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -346,7 +331,6 @@ h2.h2tit {
                 width: 500px;
                 height: 500px;
                 overflow: hidden;
-                border: 2px solid #fff;
                 box-shadow: 0 0 15px rgba(0,0,0,0.2);
                 border-radius: 30% 70% 70% 30% / 30% 36% 64% 70%;
                 animation: radiusani 3s linear infinite both alternate;
@@ -367,20 +351,29 @@ h2.h2tit {
                     height: 400px;
                 }
                 @include tablet-screen {
+                    width: 400px;
+                    height: 400px;
+                }
+                @include mob--screen {
                     width: 300px;
                     height: 300px;
                 }
-                @media screen and (max-width: 360px) {
-                    width: 250px;
-                    height: 250px;
-                }
+                // @media screen and (max-width: 360px) {
+                //     width: 250px;
+                //     height: 250px;
+                // }
             }
             .aboutText {
                 text-align: left;
-                margin-top: 12px;
+                margin-top: 35px;
+                @include td-screen {
+                    margin-top: 15px;
+                }
+                @include tablet-screen {
+                    width: 100%;
+
+                }
                 .textBox {
-                    padding-bottom: 30px;
-                    border-bottom: 1px solid $basic-color;
                     p {
                         font-size: 18px;
                         color: $basic-color;
@@ -397,15 +390,32 @@ h2.h2tit {
                         @include td-screen {
                             font-size: 15px;
                         }
+                        @include tablet-screen {
+                            font-size: 17px;
+                        }
                         @include mob--screen {
                             line-height: 24px;
-                        }
-                        br {
-                            display: none;
+                            font-size: 15px;
                         }
                         &:first-child > br:first-child {
                             @include tablet-screen  {
                                 display: block;
+                            }
+                        }
+                        &:first-child > br:nth-child(2) {
+                            @include tablet-screen  {
+                                display: none;
+                            }
+                        }
+                        &:nth-child(2) > br {
+                            @include tablet-screen  {
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(3) > br {
+                            @include tablet-screen  {
+                                display: none;
                             }
                         }
                     }
@@ -417,17 +427,13 @@ h2.h2tit {
                     }
                 }
                 .aboutMore {
-                    .fa-circle-chevron-down {
-                        margin-right: 10px;
-                        transform: rotate(-90deg);
-                        @include mob--screen {
-                            margin-right: 5px;
-                        }
-                    }
                     display: block;
+                    width: 115px;
+                    border: 1px solid #333333;
+                    padding: 7px 0;
                     margin-top: 30px;
-                    color: $basic-color;
-                    font-size: 20px;
+                    transition: all 0.3s;
+                    text-align: center;
                     @include td-screen {
                         margin-top: 25px;
                         font-size: 18px;
@@ -436,20 +442,27 @@ h2.h2tit {
                         margin-top: 15px;
                         font-size: 15px;
                     }
+                    &:hover {
+                        background-color: #b2ffcd;
+                    }
                     > span {
+                        display: inline-block;
+                        padding-right: 23px;
+                        font-family: 'Pretendard';
+                        font-weight: 400;
                         position: relative;
-                        &::before {
+                        line-height: 1;
+                        color: $basic-color;
+                        font-size: 16px;
+                        transition: all 0.3s;
+                        &::after {
                             content: '';
                             position: absolute;
-                            bottom: -3px;
-                            left: 0;
-                            width: 0px;
-                            height: 1px;
-                            transition: all 0.3s;
-                            background-color: #000;
-                        }
-                        &:hover::before {  
-                            width: 100%;
+                            top: 1px;
+                            right: 0;
+                            width: 14px;
+                            height: 13px;
+                            background: url('../../images/main/moreArrow.png') no-repeat center/cover;
                         }
                     }
                 }
@@ -457,11 +470,11 @@ h2.h2tit {
         }
         .mySkill {
             padding-top: 120px;
-            gap: 80px;
-            display: flex;
+            text-align: left;
             justify-content: center;
             @include td-screen {
                 gap: 30px;
+
             }
 
             @include mob--screen{
@@ -534,14 +547,14 @@ h2.h2tit {
                 }
             }
             .skillList {
-                @include td-screen {
-                    width: 510px;
-                    padding-left: 25px;
-                 }
-                @include tablet-screen {
-                    width: auto;
-                    padding-left: 0;
-                }
+                flex-wrap: wrap;
+                // @include td-screen {
+                //     width: 510px;   
+                //  }
+                // @include tablet-screen {
+                //     width: auto;
+                //     padding-left: 0;
+                // }
                 > p {
                     font-family: 'ChalkboardSE';
                     font-size: 30px;
@@ -572,9 +585,69 @@ h2.h2tit {
                     }
                 }
             }
+            .skillWrap {
+                .skillflexBox {
+                    display: flex;
+                    @include td-screen {
+                        gap: 70px;
+                    }
+                    @include tablet-screen {
+                        flex-direction: column;
+                        gap: 40px;
+                    }
+                    h3.skillTit {
+                        font-size: 18px;
+                        color: #000000;
+                        font-weight: 600;
+                        font-family: 'Pretendard';
+                        margin-bottom: 20px;
+                    }
+                    .felibframeWork {
+                        margin-left: 240px;
+                        @include td-screen {
+                            margin-left: 0px;
+                        }
+                    }
+                    .skillList {
+                        display: flex;
+                        align-items: center;
+                        gap: 18px;
+                        @include mob--screen {
+                            img {
+                                max-height: 35px;
+                            }
+                        }
+                        .iconbox {
+                            img {
+                                font-size: 0;
+                                border-radius: 12px;
+                                box-shadow: 0 0 5px rgba(0,0,0,0.15);
+                            }
+                        }
+                        .scss {
+                            img {
+                                font-size: 0;
+                                border-radius: 12px;
+                                box-shadow: 0 0 5px rgba(0,0,0,0.15); 
+                            }
+                        }
+
+                    }
+                    + .skillflexBox {
+                        margin-top: 45px;
+                        > div + div {
+                            margin-left: 127px;
+                            @include td-screen {
+                                margin-left: 0px;
+                            }
+                        } 
+                    }
+                }
+            }
         }
         @include td-screen {
-            padding: 0 40px;
+            max-width: 1200px;
+            padding: 150px 40px 0 40px;
         }
         @include mob--screen {
             padding: 0 15px;
@@ -594,10 +667,10 @@ h2.h2tit {
 // Experience 
 .Experience {
     position: relative;
-    z-index: 1;
-    background-color: #E0ECF8;
+    z-index: 3;
+    background-color: #ebf6ef;
     height: auto;
-    margin-bottom: 150px;
+    margin-bottom: 170px;
     @include tablet-screen {
         margin-bottom: 80px;
     }
@@ -605,11 +678,13 @@ h2.h2tit {
         margin-bottom: 50px;
     }
     .inner {
+        height: 1470px;
         @include td-screen {
             padding: 0 40px;
         }
         @include tablet-screen {
             padding: 0 40px 80px 40px;
+            height: auto;
         }
         @include mob--screen {
             padding: 0 15px 60px 15px;
@@ -618,19 +693,24 @@ h2.h2tit {
     .h2Sticky {
         position: absolute;
         width: 100%;
-        height: 416px;
-        top: -100px;
+        height: 942px;
+        top: 0;
         left: 0;
+        padding-top: 125px;
         @include tablet-screen {
             position: relative;
             top: 0;
             height: auto;
+            margin-bottom: 80px;
         }
     }
     h2 {
         position: sticky;
         top: 130px;
         text-align: center;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
     }
     .stickyFix {
         height: 313px;
@@ -639,50 +719,84 @@ h2.h2tit {
         }
     }
     .experienSticky {
+        position: relative;
+        .stickyBox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            @include tablet-screen {
+                position: unset;
+                height: auto !important;
+                + .stickyBox {
+                    margin-top: 50px;
+                }
+            }
+            &:first-child {
+                top: 235px;
+                height: 1170px;
+            }
+            &:nth-child(2) {
+                top: 695px;
+                height: 797px;
+                .experienceBox {
+                    top: 318px;
+                }
+            }
+            &:nth-child(3) {
+                top: 1160px;
+                padding-top: 5px;
+                @include tablet-screen {
+                    padding-top: 0;
+                }
+            }
+        }
         .experienceBox {
             position: sticky;
             top: 230px;
             z-index: 8;
             margin: 0 auto;
             max-width: 1300px;
-            height: 402px;
+            height: 415px;
             color: $basic-color;
-            border-radius: 30px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            padding: 30px 30px;
+            overflow: hidden;
             font-size: 30px;
-            background-color: hsl(226, 61%, 67%);
             @include tablet-screen {
                 position: relative;
-                top: 0;
+                top: 0 !important;
                 height: auto;
                 border-radius: 15px;
-                padding: 30px 20px;
-            }
-            @include mob--screen {
-                padding: 20px 15px;
-            }
-            &.type2 {
-                background-color: hsl(226, 58%, 59%);
-                margin-top: 30px;
+                padding: 0;
             }
             .boxInner {
                 width: 100%;
                 height: 100%;
                 .boxTit {
-                    margin-bottom: 20px;
-                    padding-bottom: 13px;
-                    border-bottom: 2px solid #fff;
-                    @include mob--screen {
-                        margin-bottom: 12px;
-                        padding-bottom: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: #f6f6f6;
+                    padding: 0 30px;
+                    height: 95px;
+                    border-bottom: 1px solid #000000;
+                    @include tablet-screen  {
+                        height: 90px;
+                        padding: 0 20px;
                     }
                     h3 {
-                        color: #fff;
-                        font-weight: 500;
-                        font-size: 24px;
+                        font-family: 'Pretendard';
+                        color: #000000;
+                        font-weight: 600;
+                        font-size: 25px;
                         > .year {
                             font-size: 20px;
+                            font-weight: 500;
+                            color: #666666;
+                            @include tablet-screen {
+                                font-size: 16px;
+                            }
                             @include mob--screen {
                                 display: block;
                                 font-size: 14px;
@@ -690,16 +804,20 @@ h2.h2tit {
                             }
                         } 
                         @include tablet-screen {
-                            font-size: 22px;
-                        }
-                        @include mob--screen {
                             font-size: 20px;
                         }
+                        // @include mob--screen {
+                        //     font-size: 20px;
+                        // }
                     }
                     p {
-                        font-size: 18px;
-                        color: #fff;
+                        font-size: 19px;
+                        color: #333333;
+                        font-weight: 500;
                         margin-top: 10px;
+                        @include tablet-screen {
+                            font-size: 18px;
+                        }
                         @include mob--screen {
                             font-size: 14px;
                             margin-top: 7px;
@@ -708,28 +826,34 @@ h2.h2tit {
                 }
                 .projectCon {
                     display: flex;
+                    height: calc(100% - 105px);
                     .project {
                         width: 50%;
-                        &:nth-child(1) {
-                            padding-right: 50px;
-                            @include tablet-screen {
-                                padding-right: 0;
-                            }
-                        }
+                        height: 100%;
                         @include tablet-screen {
                             width: 100%;
+                            + .project {
+                                padding-top: 0;
+                            }
                         }
                     }
                     @include tablet-screen {
                         flex-direction: column;
-                        gap: 30px;
+                        gap: 0;
                     }
                 }
                 .project {
+                    height: calc(100% - 95px);
+                    padding: 30px 50px;
+                    background-color: #fff;
+                    @include tablet-screen {
+                        padding: 30px 20px;
+                    }
                     h3 {
-                        font-size: 22px;
+                        font-size: 24px;
                         margin-bottom: 15px;
-                        color: #fff;
+                        font-weight: 600;
+                        color: #333333;
                         > span {
                             font-size: 18px;
                             font-weight: 500;
@@ -749,8 +873,9 @@ h2.h2tit {
                         }
                     }
                     .viewBtn {
-                        color: #fff;
-                        font-size: 15px;
+                        color: #666666;
+                        font-weight: 500;
+                        font-size: 18px;
                         .fa-paste {
                             margin-right: 5px;
                         }
@@ -764,7 +889,7 @@ h2.h2tit {
                 }
                 .projectList {
                     padding-top: 4px;
-                    height: 206px;
+                    height: 215px;
                     overflow-y: auto;
                     &::-webkit-scrollbar  {
                         width: 5px;
@@ -777,18 +902,20 @@ h2.h2tit {
                     &::-webkit-scrollbar-track {
                         background: transparent; 
                     }
-                    @include mob--screen {
+                    @include tablet-screen {
                         height: 147px;
                     }
                     > li {
                         position: relative;
                         display: flex;
+                        align-items: center;
                         justify-content: space-between;
                         position: relative;
-                        font-size: 16px;
-                        color: #fff;
+                        font-size: 19px;
+                        font-weight: 500;
+                        color: #000000;
                         padding-left: 12px;
-                        padding-right: 15px;
+                        padding-right: 10px;
                         padding-bottom: 10px;
                         @include tablet-screen {
                             padding-bottom: 7px;
@@ -796,16 +923,16 @@ h2.h2tit {
                         &::after {
                             content: '';
                             position: absolute;
-                            top: 6px;
+                            top: 7px;
                             left: 1px;
                             width: 4px;
                             height: 4px;
                             border-radius: 100%;
-                            background-color: #fff;
+                            background-color: #000000;
                         }
                         &:not(:last-child) {
                             margin-bottom: 10px;
-                            border-bottom: 1px solid rgba(0,0,0,0.2);
+                            border-bottom: 1px solid #dddddd;
                             @include tablet-screen {
                                 margin-bottom: 7px;
                             }
@@ -820,8 +947,10 @@ h2.h2tit {
                         }
                         .Internal {
                             flex-shrink: 0;
-                            color: #fff;
-                            font-size: 15px;
+                            color: #666666;
+                            font-size: 18px;
+                            // margin-right: 23px;
+                            font-weight: 500;
                             @include tablet-screen {
                                 font-size: 14px;
                             }
@@ -831,11 +960,22 @@ h2.h2tit {
                         }
                         .siteView {
                             flex-shrink: 0;
-                            color: #fff;
-                            font-size: 15px;
-                            .fa-circle-chevron-down {
-                                transform: rotate(-90deg);
-                                margin-right: 5px;
+                            color: #666666;
+                            font-size: 18px;
+                            font-weight: 500;
+                            > span {
+                                position: relative;
+                                padding-right: 21px;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 2px;
+                                    right: 1px;
+                                    width: 14px;
+                                    height: 13px;
+                                    font-size: 13px;
+                                    background: url('../../images/main/goArrow.png') no-repeat center/cover;
+                                }
                             }
                             @include tablet-screen {
                                 font-size: 14px;
@@ -884,7 +1024,7 @@ h2.h2tit {
                                  &::before {
                                     content: '';
                                     position: absolute;
-                                    top: 3px;
+                                    top: 7px;
                                     left: 0;
                                     width: 4px;
                                     height: 4px;
@@ -943,13 +1083,13 @@ h2.h2tit {
                 @include tablet-screen {
                     top: 0;
                     position: relative;
+                    z-index: 1;
                     width: 100%;
                 }
                 h2 {
                     display: inline-block;
                     position: relative;
-                    font-size: 70px;
-                    font-family: 'ChalkboardSE';
+                    margin-bottom: 0;
                     > span {
                         &::after {
                             content: '';
@@ -961,9 +1101,6 @@ h2.h2tit {
                             background-color: $basic-color;
                             animation: baropa 0.4s infinite both alternate;
                         }
-                    }
-                    @include mob--screen  {
-                        font-size: 40px;
                     }
                 }
                 @keyframes baropa {
@@ -1033,6 +1170,10 @@ h2.h2tit {
                         .thumTx {
                             margin-top: 15px;
                             text-align: center;
+                            > p {
+                                font-size: 18px;
+                                font-weight: 500;
+                            }
                         }
                         + li {
                             margin-top: 25px;

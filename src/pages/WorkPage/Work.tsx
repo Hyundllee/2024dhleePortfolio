@@ -59,7 +59,18 @@ const Work: React.FC<WorkProps> = ({ portfolioList }) => {
           </div>
           <div className='titleBox'>
             <h2>{item.title} <span className='period'>{item.period}</span> </h2>
-            <a href={item.link} target='_blank' title={item.title} className='view'>View <FontAwesomeIcon icon={faArrowRight} /></a>
+            <a
+              href={item.link}
+              target="_blank"
+              title={item.title}
+              className={`view ${item.interior ? 'Interior' : ''}`}
+            >
+              {item.interior ? "Interior Open" : (
+                <>
+                  View <FontAwesomeIcon icon={faArrowRight} />
+                </>
+              )}
+            </a>
           </div>
           <div className='workContent'>
             <WorkContent item={item} />
@@ -68,13 +79,13 @@ const Work: React.FC<WorkProps> = ({ portfolioList }) => {
             <button className='arrow left' onClick={handlePrev}><FontAwesomeIcon icon={faChevronLeft}/></button>
             <button className='arrow right' onClick={handleNext}><FontAwesomeIcon icon={faChevronRight}/></button>
             <button type='button' className='modalClose' onClick={handleClose}><FontAwesomeIcon icon={faTimes}/></button>
+          </div>
         </div>
-        </div>
-        <div className='desk'>
-          <button className='arrow left' onClick={handlePrev}><FontAwesomeIcon icon={faChevronLeft}/></button>
-          <button className='arrow right' onClick={handleNext}><FontAwesomeIcon icon={faChevronRight}/></button>
-          <button type='button' className='modalClose' onClick={handleClose}><FontAwesomeIcon icon={faTimes}/></button>
-        </div>
+          <div className='desk'>
+            <button className='arrow left' onClick={handlePrev}><FontAwesomeIcon icon={faChevronLeft}/></button>
+            <button className='arrow right' onClick={handleNext}><FontAwesomeIcon icon={faChevronRight}/></button>
+            <button type='button' className='modalClose' onClick={handleClose}><FontAwesomeIcon icon={faTimes}/></button>
+          </div>
       </div>
     </div>
   );

@@ -4,24 +4,19 @@
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: #E0ECF8;
+  // background-color: #ebf6ef;
   .inner {
       max-width: 1300px;
       margin: 0 auto;
       padding: 80px 0 120px 0;
       .footerTop {
-          h2 {
-              font-size: 42px;
-              font-family: 'ChalkboardSE';
-              color: $basic-color;
-          }
 
           .highlight_circle > p {
               position: relative;
               z-index: 1;
-              font-size: 44px;
-              margin-top: 30px;
+              font-size: 45px;
               line-height: 62px;
+              font-family: 'GmarketSans';
               color: $basic-color;
               font-weight: 400;
               @include tablet-screen {
@@ -34,7 +29,7 @@
               }
               @media screen and (max-width: 420px) {
                 font-size: 20px;
-                line-height: 33px;
+                line-height: 29px;
 
               }
           }
@@ -49,9 +44,10 @@
 
   .footerMid {
       > p {
-          font-size: 25px;
-          line-height: 37px;
+          font-size: 19px;
+          line-height: 32px;
           color: $basic-color;
+          font-family: 'Pretendard';
           margin-top: 25px;
           @include tablet-screen {
             font-size: 22px;
@@ -102,7 +98,7 @@
                   }
 
                   > span {
-                      font-weight: 500;
+                    font-family: 'Pretendard';
                       font-size: 32px;
                       color: $basic-color;
                       @include tablet-screen {
@@ -134,7 +130,6 @@
                   }
 
                   > a {
-                      font-weight: 500;
                       font-size: 24px;
                       color: $basic-color;
                       @include tablet-screen {

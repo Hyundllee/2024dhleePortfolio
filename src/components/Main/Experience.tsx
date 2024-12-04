@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronCircleDown, faWrench } from "@fortawesome/free-solid-svg-icons";
 import MaintenanceItem from './Experience/MaintenanceItem';
 
 const maintenanceData = [
@@ -297,6 +295,10 @@ const projectData2 = [
   { name: "국회도서관 융복합서비스 데이터셋 구축사업", link: "", internal: true }
 ];
 
+const projectData3 = [
+  { name: "오픈소스 관리 포털 내부 시스템 구축", link: "", internal: true  },
+];
+
 const Experience: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -308,63 +310,88 @@ const Experience: React.FC = () => {
     <div className='Experience'>
       <div className='inner'>
         <div className='h2Sticky'>
-          <h2 className='h2tit'>Experience</h2>
+          <h2 className='h2tit highlightFont'>EXPERIENCE</h2>
         </div>
         <div className='experienSticky'>
-          <div className='experienceBox'>
-            <div className='boxInner'>
-              <div className='boxTit'>
-                <h3><span className='companyN'>프로젝트 독</span> <span className='year'>2021.01 - 2021.07</span></h3>
-                <p>개발팀 / 사원</p>
-              </div>
-              <div className='project'>
-                <h3>프로젝트</h3>
-                <ul className='projectList'>
-                  {projectData1.map((project, index) => (
-                    <li key={index}>
-                      <span>{project.name}</span>
-                      {project.link && <a href={project.link} target='_blank' className='siteView'><FontAwesomeIcon icon={faChevronCircleDown} />바로가기</a>}
-                    </li>
-                  ))}
-                </ul>
+          <div className='stickyBox num1'>
+            <div className='experienceBox'>
+              <div className='boxInner'>
+                <div className='boxTit'>
+                  <h3><span className='companyN'>(주)프로젝트 독</span> <span className='year'>2021.01 - 2021.07</span></h3>
+                  <p>개발팀 / 사원</p>
+                </div>
+                <div className='project'>
+                  <h3>프로젝트</h3>
+                  <ul className='projectList'>
+                    {projectData1.map((project, index) => (
+                      <li key={index}>
+                        <span>{project.name}</span>
+                        {project.link && <a href={project.link} target='_blank' className='siteView'><span>바로가기</span></a>}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+          
+          <div className='stickyBox num2'>
+            <div className='experienceBox'>
+                <div className='boxInner'>
+                  <div className='boxTit'>
+                    <h3><span className='companyN'>(주)퓨쳐누리</span> <span className='year'>2021.09 - 2024.06</span></h3>
+                    <p>개발팀 / 대리</p>
+                  </div>
+                  <div className='projectCon'>
+                    <div className='project'>
+                      <h3>프로젝트 <span>( KOSA 인증완료 )</span></h3>
+                      <ul className='projectList'>
+                        {projectData2.map((project, index) => (
+                          <li key={index}>
+                            <span>{project.name}</span>
+                            {project.link && <a href={project.link} target='_blank' className='siteView'><span>바로가기</span></a>}
+                            {project.internal && <span className='Internal'>내부오픈</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className='project'>
+                      <h3>유지보수</h3>
+                      <ul className='projectList'>
+                        {maintenanceData.map((item, index) => (
+                          <MaintenanceItem 
+                            key={index} 
+                            title={item.title} 
+                            details={item.details} 
+                            isOpen={openIndex === index}
+                            onToggle={() => handleToggle(index)} 
+                          />
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
 
-          <div className='stickyFix'>
-            <div className='experienceBox type2'>
+          <div className='stickyBox num3'>
+            <div className='experienceBox'>
               <div className='boxInner'>
                 <div className='boxTit'>
-                  <h3><span className='companyN'>(주)퓨쳐누리</span> <span className='year'>2021.09 - 2024.06</span></h3>
-                  <p>개발팀 / 대리</p>
+                  <h3><span className='companyN'>NH 농협은행</span> <span className='year'>2024.07 - 2024.11</span></h3>
+                  <p>IT품질관리팀 / 선임</p>
                 </div>
-                <div className='projectCon'>
-                  <div className='project'>
-                    <h3>프로젝트 <span>( KOSA 인증완료 )</span></h3>
-                    <ul className='projectList'>
-                      {projectData2.map((project, index) => (
-                        <li key={index}>
-                          <span>{project.name}</span>
-                          {project.link && <a href={project.link} target='_blank' className='siteView'><FontAwesomeIcon icon={faChevronCircleDown} />바로가기</a>}
-                          {project.internal && <span className='Internal'> <FontAwesomeIcon icon={faWrench} /> 내부오픈</span>}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className='project'>
-                    <h3>유지보수</h3>
-                    <ul className='projectList'>
-                      {maintenanceData.map((item, index) => (
-                        <MaintenanceItem 
-                          key={index} 
-                          title={item.title} 
-                          details={item.details} 
-                          isOpen={openIndex === index}
-                          onToggle={() => handleToggle(index)} 
-                        />
-                      ))}
-                    </ul>
-                  </div>
+                <div className='project'>
+                  <h3>프로젝트 <span>( KOSA 인증가능 )</span> </h3>
+                  <ul className='projectList'>
+                    {projectData3.map((project, index) => (
+                      <li key={index}>
+                        <span>{project.name}</span>
+                        {project.link && <a href={project.link} target='_blank' className='siteView'><span>바로가기</span></a>}
+                        {project.internal && <span className='Internal'>내부오픈</span>}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {WorkContentItem} from '../WorkPage/Pages/types/types'
 import Catholic from './Pages/Catholic';
+import Nhopensource from './Pages/Nhopensource';
 import Portfoliopage from './Pages/Portfoliopage';
 import Knou from './Pages/Knou';
 import U from './Pages/U';
@@ -17,6 +18,10 @@ interface WorkContentProps {
 const WorkContent: React.FC<WorkContentProps> = ({ item }) => {
   const renderContent = () => {
     switch (item.id) {
+      case 'nhopen':
+        return (
+          <Nhopensource item = {item}/>
+        );
       case 'portfolio':
         return (
           <Portfoliopage item = {item}/>

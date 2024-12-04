@@ -78,7 +78,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ portfolioList }) => {
       <div className='inner'>
         <div className="portWrap">
           <div className="porfolioText">
-            <h2>Portfolio<span></span></h2>
+            <h2 className='h2tit highlightFont'>PORTFOLIO<span></span></h2>
             <p>실무를 통해 사랑과 정성을 담은 결과물들입니다. <br/>
               또한 실무에서 경험하지 못한 부분들은 개인적으로 <br/> 학습해가며 부족한 부분을 메우려 계속 정진 중입니다.
             </p>
