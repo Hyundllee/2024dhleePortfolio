@@ -670,13 +670,6 @@ h2.h2tit {
     z-index: 3;
     background-color: #ebf6ef;
     height: auto;
-    margin-bottom: 170px;
-    @include tablet-screen {
-        margin-bottom: 80px;
-    }
-    @include mob--screen {
-        margin-bottom: 50px;
-    }
     .inner {
         height: 1470px;
         @include td-screen {
@@ -702,6 +695,10 @@ h2.h2tit {
             top: 0;
             height: auto;
             margin-bottom: 80px;
+        }
+        @include mob--screen {
+            padding-top: 80px;
+            margin-bottom: 60px;
         }
     }
     h2 {
@@ -1051,10 +1048,16 @@ h2.h2tit {
     position: relative;
     background-color: $bg-color1;
     min-height: 700px;
+    padding-top: 170px;
     padding-bottom: 140px;
+
+    @include tablet-screen {
+        padding-top: 80px;
+    }
     @include mob--screen {
         padding-bottom: 80px;
     }
+
     .inner {
         max-width: 1300px;
         margin: 0 auto;
@@ -1100,7 +1103,12 @@ h2.h2tit {
                             height: 2px;
                             background-color: $basic-color;
                             animation: baropa 0.4s infinite both alternate;
+                            @include mob--screen {
+                                width: 25px;
+                                right: -30px;
+                            }
                         }
+
                     }
                 }
                 @keyframes baropa {
