@@ -34,10 +34,11 @@
             font-weight: 500;
             color: $basic-color;
             order: 3;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 500;
             @include mob--screen {
               font-size: 14px;
+              display: none;
             }
             > span.dot {
                 position: absolute;
