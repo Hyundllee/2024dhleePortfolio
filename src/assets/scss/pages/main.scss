@@ -1,1379 +1,1387 @@
 // Intro
 .highlightFont {
-    position: relative;
-    display: inline-block;
-    line-height: 1;
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 70%;
-        background-color: #b2ffcd;
-        z-index: -1;
-    }
+	position: relative;
+	display: inline-block;
+	line-height: 1;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 70%;
+		background-color: #b2ffcd;
+		z-index: -1;
+	}
 }
 h2.highlightFont {
-    &::after {
-        height: 50%;
-    }
+	&::after {
+		height: 50%;
+	}
 }
 
 .Intro {
-    width: 100%;
-    background-color: var(--background-Color);
-    height: calc(100vh - 87px);
-    @include tablet-screen {
-        height: 450px;
-    }
-    @include mob--screen {
-        height: 350px;
-    }
-    .bgText {
-        position: fixed;
-        width: 100vw;
-        z-index: 1;
-        transform: rotate(-4deg);
-        .text_p {
-            position: relative;
-            margin-top: 4%;
-            font-size: 185px;
-            white-space: nowrap;
-            color: rgba(54,84,134,0.05);
-            font-family: 'GmarketSans';
-            font-weight: 600;
-            @include td-screen {
-                font-size: 15vw;
-            }
-        }
-    }
-    .bg-shape1 {
-        top: -100px;
-        left: -50px;
-        border-radius: 9999px;
-        position: relative;
-        animation: one 10s infinite;
-    }
-    .bg-shape2 {
-        bottom: -100px;
-        right: -100px;
-        border-radius: 9999px;
-        position: relative;
-        animation: two 10s infinite;
-    }
-    .opacity-50 {
-        opacity: .7;
-    }
-    .bg-blur {
-        width: 300px;
-        height: 300px;
-        filter: blur(100px);
-        position: fixed;
-        z-index: 1;
-    }
-    .bg-primary {
-        background-color: #bdffd4;
-    }
-    .bg-teal {
-        background-color: #bdfaf0;
-    }
-    .introInner {
-        position: relative;
-        max-width: 1300px;
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        @media screen and (max-width: 1600px) {
-            max-width: 1200px;
-        }
-        .introText {
-            @include pos-center($top: 47%);
-            width: 100%;
-            text-align: left;
-            @media screen and (max-width: 1350px) {
-                padding: 0 40px;
-            }
-            @include mob--screen {
-                padding: 0 15px;
-            }
-            .mainText {
-                > p {
-                    color: $basic-color;
-                    font-size: 80px;
-                    font-family: 'GmarketSans';
-                    font-weight: 600;
-                    letter-spacing: -0.02em;
-                    opacity: 0; 
-                    &.text-animation span {
-                        opacity: 0; animation: 600ms ease-in-out 0s 1 normal forwards running fade;
-                    }
-                    @keyframes fade { 
-                        0% { top: 10px; left: 10px; filter: blur(15px); opacity: 0; }
-                        50% { filter: blur(10px); opacity: 0.9; }
-                        100% { top: 0px; left: 0px; filter: blur(0px); opacity: 1; }
-                      }
-                    @include td-screen {
-                        font-size: 7vw; 
-                    }
-                    @include tablet-screen {
-                        font-size: 52px; 
-                    }
-                    @include mob--screen {
-                        font-size: 7vw; 
-                    }
-                }
-                > h2 {
-                    animation: 0.6s ease-in-out 1.7s normal forwards running fade; opacity: 0;
-                    color: $basic-color;
-                    font-size: 80px;
-                    letter-spacing: -0.02em;
-                    font-family: 'GmarketSans';
-                    font-weight: 600;
-                    white-space: nowrap;
-                    margin: 15px 0 80px 0;
-                    @include td-screen {
-                        font-size: 7vw;
-                    }
-                    @include tablet-screen {
-                        font-size: 52px; 
-                        margin: 15px 0 50px 0;
-                    }
-                    @include mob--screen {
-                        font-size: 7vw; 
-                        margin: 15px 0 30px 0;
-                    }
-                }
-            }
-            .subText {
-                position: relative;
-                > p:first-child {
-                    color: $basic-color;
-                    font-size: 21px;
-                    font-family: 'Pretendard';
-                    font-weight: 400;
-                    line-height: 1.8;
-                    padding-left: 5px;
-                    @include td-screen {
-                        font-size: 1.7vw;
-                    }
-                    @include tablet-screen {
-                        font-size: 17px; 
-                        line-height: 28px;
-                    }
-                    @include mob--screen {
-                        font-size: 15px;
-                        line-height: 24px;
-                        padding-left: 0;
-                    }
-                }
-                .myName {
-                    color: $basic-color;
-                    font-family: 'Montserrat';
-                    font-weight: 500;
-                    position: absolute;
-                    bottom: 0;
-                    right: 80px;
-                    font-size: 28px;
-                    font-weight: 500;
-                    letter-spacing: -0.02em;
-                    @include td-screen {
-                        font-size: 1.5vw;
-                    }
-                    @include tablet-screen {
-                        font-size: 17px; 
-                        right: 20px;
-                        // line-height: 28px;
-                    }
-                    @include mob--screen {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
+	width: 100%;
+	background-color: var(--background-Color);
+	height: calc(100vh - 87px);
+	@include tablet-screen {
+		height: 450px;
+	}
+	@include mob--screen {
+		height: 350px;
+	}
+	.bgText {
+		position: fixed;
+		width: 100vw;
+		z-index: 1;
+		transform: rotate(-4deg);
+		.text_p {
+			position: relative;
+			margin-top: 4%;
+			font-size: 185px;
+			white-space: nowrap;
+			color: rgba(54, 84, 134, 0.05);
+			font-family: "GmarketSans";
+			font-weight: 600;
+			@include td-screen {
+				font-size: 15vw;
+			}
+		}
+	}
+	.bg-shape1 {
+		top: -100px;
+		left: -50px;
+		border-radius: 9999px;
+		position: relative;
+		animation: one 10s infinite;
+	}
+	.bg-shape2 {
+		bottom: -100px;
+		right: -100px;
+		border-radius: 9999px;
+		position: relative;
+		animation: two 10s infinite;
+	}
+	.opacity-50 {
+		opacity: 0.7;
+	}
+	.bg-blur {
+		width: 300px;
+		height: 300px;
+		filter: blur(100px);
+		position: fixed;
+		z-index: 1;
+	}
+	.bg-primary {
+		background-color: #bdffd4;
+	}
+	.bg-teal {
+		background-color: #bdfaf0;
+	}
+	.introInner {
+		position: relative;
+		z-index: 2;
+		max-width: 1300px;
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+		@media screen and (max-width: 1600px) {
+			max-width: 1200px;
+		}
+		.introText {
+			@include pos-center($top: 47%);
+			width: 100%;
+			text-align: left;
+			@media screen and (max-width: 1350px) {
+				padding: 0 40px;
+			}
+			@include mob--screen {
+				padding: 0 15px;
+			}
+			.mainText {
+				> p {
+					color: $basic-color;
+					font-size: 80px;
+					font-family: "GmarketSans";
+					font-weight: 600;
+					letter-spacing: -0.02em;
+					opacity: 0;
+					&.text-animation span {
+						opacity: 0;
+						animation: 600ms ease-in-out 0s 1 normal forwards running fade;
+					}
+					@keyframes fade {
+						0% {
+							top: 10px;
+							left: 10px;
+							filter: blur(15px);
+							opacity: 0;
+						}
+						50% {
+							filter: blur(10px);
+							opacity: 0.9;
+						}
+						100% {
+							top: 0px;
+							left: 0px;
+							filter: blur(0px);
+							opacity: 1;
+						}
+					}
+					@include td-screen {
+						font-size: 7vw;
+					}
+					@include tablet-screen {
+						font-size: 52px;
+					}
+					@include mob--screen {
+						font-size: 7vw;
+					}
+				}
+				> h2 {
+					animation: 0.6s ease-in-out 1.7s normal forwards running fade;
+					opacity: 0;
+					color: $basic-color;
+					font-size: 80px;
+					letter-spacing: -0.02em;
+					font-family: "GmarketSans";
+					font-weight: 600;
+					white-space: nowrap;
+					margin: 15px 0 80px 0;
+					@include td-screen {
+						font-size: 7vw;
+					}
+					@include tablet-screen {
+						font-size: 52px;
+						margin: 15px 0 50px 0;
+					}
+					@include mob--screen {
+						font-size: 7vw;
+						margin: 15px 0 30px 0;
+					}
+				}
+			}
+			.subText {
+				position: relative;
+				> p:first-child {
+					color: $basic-color;
+					font-size: 21px;
+					font-family: "Pretendard";
+					font-weight: 400;
+					line-height: 1.8;
+					padding-left: 5px;
+					@include td-screen {
+						font-size: 1.7vw;
+					}
+					@include tablet-screen {
+						font-size: 17px;
+						line-height: 28px;
+					}
+					@include mob--screen {
+						font-size: 15px;
+						line-height: 24px;
+						padding-left: 0;
+					}
+				}
+				.myName {
+					color: $basic-color;
+					font-family: "Montserrat";
+					font-weight: 500;
+					position: absolute;
+					bottom: 0;
+					right: 80px;
+					font-size: 28px;
+					font-weight: 500;
+					letter-spacing: -0.02em;
+					@include td-screen {
+						font-size: 1.5vw;
+					}
+					@include tablet-screen {
+						font-size: 17px;
+						right: 20px;
+						// line-height: 28px;
+					}
+					@include mob--screen {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }
 
 // scrollDown
 .scrollBar {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    .text {
-        font-family: 'Montserrat';
-        font-weight: 500;
-        display: block;
-        margin-top: 70px;
-        font-size: 14px;
-        color: $basic-color;
-        white-space: nowrap;
-        opacity: .25;
-        animation: pulse 2s linear alternate infinite;
-        @include tablet-screen {
-            margin-top: 62px;
-            font-size: 13px;
-        }
-    }
-    @include tablet-screen {
-        bottom: -45px;
-    }
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	.text {
+		font-family: "Montserrat";
+		font-weight: 500;
+		display: block;
+		margin-top: 70px;
+		font-size: 14px;
+		color: $basic-color;
+		white-space: nowrap;
+		opacity: 0.25;
+		animation: pulse 2s linear alternate infinite;
+		@include tablet-screen {
+			margin-top: 62px;
+			font-size: 13px;
+		}
+	}
+	@include tablet-screen {
+		bottom: -45px;
+	}
 }
 .chevron {
-    margin: 0 auto;
-    width: 28px;
-    height: 2px;
-    opacity: 0;
-    transform: scale3d(0.5, 0.5, 0.5);
-    animation: move 3s ease-out infinite;
-    &:first-child {
-        animation: move 3s ease-out 1s infinite;
-    }
-    &:nth-child(2) {
-        animation: move 3s ease-out 2s infinite;
-    }
-    &::before ,
-    &::after {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 51%;
-        background: $basic-color;;
-    }
-    &::before {
-        left: 0;
-        transform: skew(0deg, 30deg);
-    }
-    &::after {
-        right: 0;
-        width: 50%;
-        transform: skew(0deg, -30deg);
-  }
-  @keyframes move {
-    25% {
-      opacity: 1;
-  
-    }
-    33% {
-      opacity: 1;
-      transform: translateY(30px);
-    }
-    67% {
-      opacity: 1;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-    }
-  }
-  @keyframes pulse {
-    to {
-      opacity: 1;
-    }
-  }
-  @include tablet-screen {
-    width: 20px;
-    height: 1px;
-  }
+	margin: 0 auto;
+	width: 28px;
+	height: 2px;
+	opacity: 0;
+	transform: scale3d(0.5, 0.5, 0.5);
+	animation: move 3s ease-out infinite;
+	&:first-child {
+		animation: move 3s ease-out 1s infinite;
+	}
+	&:nth-child(2) {
+		animation: move 3s ease-out 2s infinite;
+	}
+	&::before,
+	&::after {
+		content: " ";
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 51%;
+		background: $basic-color;
+	}
+	&::before {
+		left: 0;
+		transform: skew(0deg, 30deg);
+	}
+	&::after {
+		right: 0;
+		width: 50%;
+		transform: skew(0deg, -30deg);
+	}
+	@keyframes move {
+		25% {
+			opacity: 1;
+		}
+		33% {
+			opacity: 1;
+			transform: translateY(30px);
+		}
+		67% {
+			opacity: 1;
+			transform: translateY(40px);
+		}
+		100% {
+			opacity: 0;
+			transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+		}
+	}
+	@keyframes pulse {
+		to {
+			opacity: 1;
+		}
+	}
+	@include tablet-screen {
+		width: 20px;
+		height: 1px;
+	}
 }
 
-// AboutMe 
+// AboutMe
 h2.h2tit {
-    font-size: 30px;
-    font-family: 'GmarketSans';
-    font-weight: 600;
-    margin-bottom: 30px;
-    @include tablet-screen {
-        text-align: center;
-    }
-    @include mob--screen {
-        font-size: 26px;
-        margin-bottom: 17px;
-    }
+	font-size: 30px;
+	font-family: "GmarketSans";
+	font-weight: 600;
+	margin-bottom: 30px;
+	@include tablet-screen {
+		text-align: center;
+	}
+	@include mob--screen {
+		font-size: 26px;
+		margin-bottom: 17px;
+	}
 }
 .AboutMe {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    @include tablet-screen {
-        padding-bottom: 80px;
-    }
-    @include mob--screen {
-        margin-top: 120px;
-        padding-bottom: 55px;
-    }
-    .inner {
-        position: relative;
-        z-index: 5;
-        max-width: 1300px;
-        margin: 0 auto;
-        padding-top: 125px;
-        text-align: center;
-        .aboutMe_con {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 75px;
-            @include tablet-screen {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-            }
-            @include mob--screen {
-                gap: 20px;
-            }
-            .profile {
-                position: relative;
-                flex-shrink: 0;
-                width: 500px;
-                height: 500px;
-                overflow: hidden;
-                box-shadow: 0 0 15px rgba(0,0,0,0.2);
-                border-radius: 30% 70% 70% 30% / 30% 36% 64% 70%;
-                animation: radiusani 3s linear infinite both alternate;
-                img {
-                    position: absolute;
-                    top: calc(50% + 145px);
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    @include td-screen {
-                        width: 100%;
-                        top: 0;
-                        left: 0;
-                        transform: none;
-                    }
-                }
-                @include td-screen {
-                    width: 400px;
-                    height: 400px;
-                }
-                @include tablet-screen {
-                    width: 400px;
-                    height: 400px;
-                }
-                @include mob--screen {
-                    width: 300px;
-                    height: 300px;
-                }
-                // @media screen and (max-width: 360px) {
-                //     width: 250px;
-                //     height: 250px;
-                // }
-            }
-            .aboutText {
-                text-align: left;
-                margin-top: 35px;
-                @include td-screen {
-                    margin-top: 15px;
-                }
-                @include tablet-screen {
-                    width: 100%;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	@include tablet-screen {
+		padding-bottom: 80px;
+	}
+	@include mob--screen {
+		margin-top: 120px;
+		padding-bottom: 55px;
+	}
+	.inner {
+		position: relative;
+		z-index: 5;
+		max-width: 1300px;
+		margin: 0 auto;
+		padding-top: 125px;
+		text-align: center;
+		.aboutMe_con {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			gap: 75px;
+			@include tablet-screen {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 30px;
+			}
+			@include mob--screen {
+				gap: 20px;
+			}
+			.profile {
+				position: relative;
+				flex-shrink: 0;
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+				border-radius: 30% 70% 70% 30% / 30% 36% 64% 70%;
+				animation: radiusani 3s linear infinite both alternate;
+				img {
+					position: absolute;
+					top: calc(50% + 145px);
+					left: 50%;
+					transform: translate(-50%, -50%);
+					@include td-screen {
+						width: 100%;
+						top: 0;
+						left: 0;
+						transform: none;
+					}
+				}
+				@include td-screen {
+					width: 400px;
+					height: 400px;
+				}
+				@include tablet-screen {
+					width: 400px;
+					height: 400px;
+				}
+				@include mob--screen {
+					width: 300px;
+					height: 300px;
+				}
+				// @media screen and (max-width: 360px) {
+				//     width: 250px;
+				//     height: 250px;
+				// }
+			}
+			.aboutText {
+				text-align: left;
+				margin-top: 35px;
+				@include td-screen {
+					margin-top: 15px;
+				}
+				@include tablet-screen {
+					width: 100%;
+				}
+				.textBox {
+					p {
+						font-size: 18px;
+						color: $basic-color;
+						line-height: 1.6;
+						+ p {
+							margin-top: 30px;
+							@include td-screen {
+								margin-top: 20px;
+							}
+							@include tablet-screen {
+								margin-top: 12px;
+							}
+						}
+						@include td-screen {
+							font-size: 15px;
+						}
+						@include tablet-screen {
+							font-size: 17px;
+						}
+						@include mob--screen {
+							line-height: 24px;
+							font-size: 15px;
+						}
+						&:first-child > br:first-child {
+							@include tablet-screen {
+								display: block;
+							}
+						}
+						&:first-child > br:nth-child(2) {
+							@include tablet-screen {
+								display: none;
+							}
+						}
+						&:nth-child(2) > br {
+							@include tablet-screen {
+								display: none;
+							}
+						}
 
-                }
-                .textBox {
-                    p {
-                        font-size: 18px;
-                        color: $basic-color;
-                        line-height: 1.6;
-                        + p {
-                            margin-top: 30px;
-                            @include td-screen {
-                                margin-top: 20px;
-                            }
-                            @include tablet-screen {
-                                margin-top: 12px;
-                            }
-                        }
-                        @include td-screen {
-                            font-size: 15px;
-                        }
-                        @include tablet-screen {
-                            font-size: 17px;
-                        }
-                        @include mob--screen {
-                            line-height: 24px;
-                            font-size: 15px;
-                        }
-                        &:first-child > br:first-child {
-                            @include tablet-screen  {
-                                display: block;
-                            }
-                        }
-                        &:first-child > br:nth-child(2) {
-                            @include tablet-screen  {
-                                display: none;
-                            }
-                        }
-                        &:nth-child(2) > br {
-                            @include tablet-screen  {
-                                display: none;
-                            }
-                        }
-
-                        &:nth-child(3) > br {
-                            @include tablet-screen  {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-                .aboutMore {
-                    display: block;
-                    min-width: 115px;
-                    width: fit-content;
-                    border: 1px solid #333333;
-                    padding: 7px 10px;
-                    margin-top: 30px;
-                    transition: all 0.3s;
-                    text-align: center;
-                    @include td-screen {
-                        margin-top: 25px;
-                        font-size: 18px;
-                    }
-                    @include mob--screen {
-                        margin-top: 15px;
-                        font-size: 15px;
-                    }
-                    &:hover {
-                        background-color: #b2ffcd;
-                    }
-                    > span {
-                        display: inline-block;
-                        padding-right: 23px;
-                        font-family: 'Pretendard';
-                        font-weight: 400;
-                        position: relative;
-                        line-height: 1;
-                        color: $basic-color;
-                        font-size: 16px;
-                        transition: all 0.3s;
-                        @include mob--screen {
-                            font-size: 15px;
-                        }
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: 1px;
-                            right: 0;
-                            width: 14px;
-                            height: 13px;
-                            background: url('../../images/main/moreArrow.png') no-repeat center/cover;
-                        }
-                    }
-                }
-                .moreBox {
-                    margin-top: 10px;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                    .aboutMore {
-                        margin-top: 0;
-                    }
-                    > p {
-                        color: #222;
-                        font-size: 15px;
-                        @include mob--screen {
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-        }
-        @include td-screen {
-            max-width: 1200px;
-            padding: 150px 40px 0 40px;
-        }
-        @include mob--screen {
-            padding: 0 15px;
-        }
-    }
+						&:nth-child(3) > br {
+							@include tablet-screen {
+								display: none;
+							}
+						}
+					}
+				}
+				.aboutMore {
+					display: block;
+					min-width: 115px;
+					width: fit-content;
+					border: 1px solid #333333;
+					padding: 7px 10px;
+					margin-top: 30px;
+					transition: all 0.3s;
+					text-align: center;
+					@include td-screen {
+						margin-top: 25px;
+						font-size: 18px;
+					}
+					@include mob--screen {
+						margin-top: 15px;
+						font-size: 15px;
+					}
+					&:hover {
+						background-color: #b2ffcd;
+					}
+					> span {
+						display: inline-block;
+						padding-right: 23px;
+						font-family: "Pretendard";
+						font-weight: 400;
+						position: relative;
+						line-height: 1;
+						color: $basic-color;
+						font-size: 16px;
+						transition: all 0.3s;
+						@include mob--screen {
+							font-size: 15px;
+						}
+						&::after {
+							content: "";
+							position: absolute;
+							top: 1px;
+							right: 0;
+							width: 14px;
+							height: 13px;
+							background: url("../../images/main/moreArrow.png") no-repeat center/cover;
+						}
+					}
+				}
+				.moreBox {
+					margin-top: 10px;
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					flex-wrap: wrap;
+					.aboutMore {
+						margin-top: 0;
+					}
+					> p {
+						color: #222;
+						font-size: 15px;
+						@include mob--screen {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+		@include td-screen {
+			max-width: 1200px;
+			padding: 150px 40px 0 40px;
+		}
+		@include mob--screen {
+			padding: 0 15px;
+		}
+	}
 }
 @keyframes radiusani {
-    0% {
-        border-radius: 30% 70% 70% 30% / 30% 36% 64% 70%;
-    }
-    100% {
-        border-radius:  47% 53% 67% 33% / 34% 47% 53% 66%;
-    }
+	0% {
+		border-radius: 30% 70% 70% 30% / 30% 36% 64% 70%;
+	}
+	100% {
+		border-radius: 47% 53% 67% 33% / 34% 47% 53% 66%;
+	}
 }
 
-
-//Resume 
+//Resume
 .Resume {
-    .inner {
-        position: relative;
-        z-index: 5;
-        max-width: 1300px;
-        margin: 0 auto;
-        padding-top: 125px;
-        text-align: left;
-        @include td-screen {
-            padding: 125px 40px 0 40px;
-        }
-        @include tablet-screen  {
-            padding-top: 0;
-        }
-        @include mob--screen {
-            padding: 0 15px;
-        }
-        h3.skillTit {
-         font-size: 23px;
-         font-weight: 600;
-         margin-bottom: 25px;
-         display: block;       
-         font-family: "GmarketSans";      
-         @include mob--screen {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }   
-        }
-        .resumeBox {
-            display: flex;
-            @include tablet-screen {
-                flex-wrap: wrap;
-                justify-content: space-between;
-                gap: 55px;
-            }
-            //experiences 
-            .Experiences {
-                width: 50%;
-                .experiencesBox {
-                    .experiencesList {
-                        padding-left: 6px;
-                        @include mob--screen {
-                            padding-left: 0;
-                        } 
-                        li {
-                            position: relative;
-                            padding-left: 20px;
-                            @include mob--screen {
-                                padding-left: 15px;
-                            } 
-                            span.line {
-                                position: absolute;
-                                top: 0;
-                                left: 5px;
-                                width: 1px;
-                                height: 100%;
-                                background-color: #222;
-                            }
-                            &:first-child span.line {
-                                top: unset;
-                                bottom: 0; 
-                                max-height: 40px;
-                                @include mob--screen {
-                                    max-height: 33px;
-                                } 
-                            }
-                            .careerBox {
-                                > div.titBox {
-                                    position: relative;
-                                    &::after {
-                                        content: '';
-                                        position: absolute;
-                                        top: 50%;
-                                        transform: translateY(-50%);
-                                        left: -19px;
-                                        background-color: #fff;
-                                        width: 10px;
-                                        height: 10px;
-                                        border: 1px solid #222;
-                                        border-radius: 100%;
-                                        @include mob--screen {
-                                            left: -13px;
-                                            width: 7px;
-                                            height: 7px;
-                                        }   
-                                    }
-                                }
-                                > div {
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 10px;
-                                    .companyTit {
-                                        font-size: 22px;
-                                        width: 155px;
-                                        color: #222;
-                                        font-weight: 500;
-                                        @include mob--screen {
-                                            font-size: 18px;
-                                            width: 112px;
-                                        }   
-                                    }
-                                    .year {
-                                        font-size: 18px;
-                                        color: #666;
-                                        font-weight: 500;
-                                        font-variant-numeric: tabular-nums;
-                                        letter-spacing: -0.05em;
-                                        @include mob--screen {
-                                            font-size: 14px;
-                                        }  
-                                    }
-                                    .positionTit {
-                                        width: 155px;
-                                        font-size: 16px;
-                                        color: #333;
-                                        font-weight: 500;
-                                        @include mob--screen {
-                                            width: 149px;
-                                            font-size: 14px;
-                                        }  
-                                    }
-                                    .Occupation {
-                                        font-size: 16px;
-                                        color: #333;
-                                        font-weight: 500;
-                                        @include mob--screen {
-                                            font-size: 14px;
-                                        }  
-                                    }
-                                    + div {
-                                        margin-top: 8px;
-                                    }
-                                }
-                            }
-                            + li {
-                                padding-top: 30px;
-                            }
-                        }
-                    }
-                }
-            }
-            //skill
-            .mySkill {
-                width: 50%;
-                text-align: left;
-                justify-content: center;
-                @include td-screen {
-                    gap: 30px;
-                }
-                
-                @include tablet-screen {
-                    padding-right: 50px;
-                }
-                @include mob--screen{
-                    padding-right: 0;
-                    flex-direction: column;
-                    gap: 0;
-                }
-                .skillText {
-                    flex-shrink: 0;
-                    width: 550px;
-                    padding-left: 50px;
-                    @include td-screen  {
-                        width: 400px;
-                    }
-                    @include td-screen {
-                        padding-left: 0;
-                    }
-                    @include mob--screen {
-                        width: 100%;
-                    }
-                    h2 {
-                        font-family: "ChalkboardSE";
-                        font-size: 90px;
-                        color: transparent;
-                        -webkit-text-stroke: 2px #151515;
-                        @include td-screen {
-                            font-size: 72px;
-                        }
-                        @include mob--screen {
-                            font-size: 28px;
-                            -webkit-text-stroke: unset;
-                            color: #000; 
-                        }
-                        span {
-                            position: relative;
-                            display: block;
-                            text-align: left;
-                            @include mob--screen {
-                                display: inline-block;
-                            }
-                            &:first-child {
-                                margin-bottom: 10px;
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    right: 0px;
-                                    width: calc(100% - 220px);
-                                    height: 3px;
-                                    background-color: #000;
-                                    @include td-screen {
-                                        width: calc(100% - 150px);
-                                    }
-                                    @include mob--screen {
-                                        display: none;
-                                    }
-                                }
-                                @include mob--screen {
-                                    margin-bottom: 0;
-                                }
-                            }
-                            &:last-child {
-                                margin-left: 80px;
-                                @include mob--screen {
-                                margin-left: 6px;
-                                }
-                            }
-                        }
-                    }
-                }
-                .skillList {
-                    flex-wrap: wrap;
-                    // @include td-screen {
-                    //     width: 510px;   
-                    //  }
-                    // @include tablet-screen {
-                    //     width: auto;
-                    //     padding-left: 0;
-                    // }
-                    img {
-                        height: 35px;
-                        @include mob--screen {
-                            height: 28px;
-                        }
-                    }
-                    > p {
-                        font-family: 'ChalkboardSE';
-                        font-size: 30px;
-                        text-align: left;
-                        margin-top: 25px;
-                        @include td-screen {
-                            margin-top: 19px;
-                        }
-                        @include mob--screen {
-                            display: none;
-                        }
-                    }
-                    > ul {
-                        display: flex;
-                        gap: 10px;
-                        flex-wrap: wrap;
-                        margin-top: 20px;
-                        > li {
-                            padding: 5px;
-                            border: 1px solid $basic-color;
-                            border-radius: 3px;
-                            @include td-screen {
-                                font-size: 15px;
-                            }
-                        }
-                        @include td-screen {
-                            gap: 7px;
-                        }
-                    }
-                }
-                .skillWrap {
-                    .skillflexBox {
-                        display: flex;
-                        @include td-screen {
-                            flex-wrap: wrap;
-                            gap: 15px;
-                        }
-                        @include tablet-screen {
-                            flex-direction: column;
-                        }
-                        > div {
-                            width: 50%;
-                            @include td-screen {
-                                width: 100%;
-                            }
-                            @include tablet-screen {
-                                width: fit-content ;
-                            }
-                        }
-                        h4.skillTit {
-                            font-size: 18px;
-                            color: #000000;
-                            font-weight: 500;
-                            font-family: 'Pretendard';
-                            margin-bottom: 12px;
-                        }
+	.inner {
+		position: relative;
+		z-index: 5;
+		max-width: 1300px;
+		margin: 0 auto;
+		padding-top: 125px;
+		text-align: left;
+		@include td-screen {
+			padding: 125px 40px 0 40px;
+		}
+		@include tablet-screen {
+			padding-top: 0;
+		}
+		@include mob--screen {
+			padding: 0 15px;
+		}
+		h3.skillTit {
+			font-size: 23px;
+			font-weight: 600;
+			margin-bottom: 25px;
+			display: block;
+			font-family: "GmarketSans";
+			@include mob--screen {
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+		}
+		.resumeBox {
+			display: flex;
+			@include tablet-screen {
+				flex-wrap: wrap;
+				justify-content: space-between;
+				gap: 55px;
+			}
+			//experiences
+			.Experiences {
+				width: 50%;
+				.experiencesBox {
+					.experiencesList {
+						padding-left: 6px;
+						@include mob--screen {
+							padding-left: 0;
+						}
+						li {
+							position: relative;
+							padding-left: 20px;
+							@include mob--screen {
+								padding-left: 15px;
+							}
+							span.line {
+								position: absolute;
+								top: 0;
+								left: 5px;
+								width: 1px;
+								height: 100%;
+								background-color: #222;
+							}
+							&:first-child span.line {
+								top: unset;
+								bottom: 0;
+								max-height: 40px;
+								@include mob--screen {
+									max-height: 33px;
+								}
+							}
+							.careerBox {
+								> div.titBox {
+									position: relative;
+									&::after {
+										content: "";
+										position: absolute;
+										top: 50%;
+										transform: translateY(-50%);
+										left: -19px;
+										background-color: #fff;
+										width: 10px;
+										height: 10px;
+										border: 1px solid #222;
+										border-radius: 100%;
+										@include mob--screen {
+											left: -13px;
+											width: 7px;
+											height: 7px;
+										}
+									}
+								}
+								> div {
+									display: flex;
+									align-items: center;
+									gap: 10px;
+									.companyTit {
+										font-size: 22px;
+										width: 155px;
+										color: #222;
+										font-weight: 500;
+										@include mob--screen {
+											font-size: 18px;
+											width: 112px;
+										}
+									}
+									.year {
+										font-size: 18px;
+										color: #666;
+										font-weight: 500;
+										font-variant-numeric: tabular-nums;
+										letter-spacing: -0.05em;
+										@include mob--screen {
+											font-size: 14px;
+										}
+									}
+									.positionTit {
+										width: 155px;
+										font-size: 16px;
+										color: #333;
+										font-weight: 500;
+										@include mob--screen {
+											width: 149px;
+											font-size: 14px;
+										}
+									}
+									.Occupation {
+										font-size: 16px;
+										color: #333;
+										font-weight: 500;
+										@include mob--screen {
+											font-size: 14px;
+										}
+									}
+									+ div {
+										margin-top: 8px;
+									}
+								}
+							}
+							+ li {
+								padding-top: 30px;
+							}
+						}
+					}
+				}
+			}
+			//skill
+			.mySkill {
+				width: 50%;
+				text-align: left;
+				justify-content: center;
+				@include td-screen {
+					gap: 30px;
+				}
 
-                        .skillList {
-                            display: flex;
-                            align-items: center;
-                            gap: 18px;
-                            @include mob--screen {
-                                img {
-                                    max-height: 35px;
-                                }
-                            }
-                            .iconbox {
-                                img {
-                                    font-size: 0;
-                                    border-radius: 12px;
-                                    box-shadow: 0 0 5px rgba(0,0,0,0.15);
-                                }
-                            }
-                            .scss {
-                                img {
-                                    font-size: 0;
-                                    border-radius: 12px;
-                                    box-shadow: 0 0 5px rgba(0,0,0,0.15); 
-                                }
-                            }
+				@include tablet-screen {
+					padding-right: 50px;
+				}
+				@include mob--screen {
+					padding-right: 0;
+					flex-direction: column;
+					gap: 0;
+				}
+				.skillText {
+					flex-shrink: 0;
+					width: 550px;
+					padding-left: 50px;
+					@include td-screen {
+						width: 400px;
+					}
+					@include td-screen {
+						padding-left: 0;
+					}
+					@include mob--screen {
+						width: 100%;
+					}
+					h2 {
+						font-family: "ChalkboardSE";
+						font-size: 90px;
+						color: transparent;
+						-webkit-text-stroke: 2px #151515;
+						@include td-screen {
+							font-size: 72px;
+						}
+						@include mob--screen {
+							font-size: 28px;
+							-webkit-text-stroke: unset;
+							color: #000;
+						}
+						span {
+							position: relative;
+							display: block;
+							text-align: left;
+							@include mob--screen {
+								display: inline-block;
+							}
+							&:first-child {
+								margin-bottom: 10px;
+								&::after {
+									content: "";
+									position: absolute;
+									top: 50%;
+									transform: translateY(-50%);
+									right: 0px;
+									width: calc(100% - 220px);
+									height: 3px;
+									background-color: #000;
+									@include td-screen {
+										width: calc(100% - 150px);
+									}
+									@include mob--screen {
+										display: none;
+									}
+								}
+								@include mob--screen {
+									margin-bottom: 0;
+								}
+							}
+							&:last-child {
+								margin-left: 80px;
+								@include mob--screen {
+									margin-left: 6px;
+								}
+							}
+						}
+					}
+				}
+				.skillList {
+					flex-wrap: wrap;
+					// @include td-screen {
+					//     width: 510px;
+					//  }
+					// @include tablet-screen {
+					//     width: auto;
+					//     padding-left: 0;
+					// }
+					img {
+						height: 35px;
+						@include mob--screen {
+							height: 28px;
+						}
+					}
+					> p {
+						font-family: "ChalkboardSE";
+						font-size: 30px;
+						text-align: left;
+						margin-top: 25px;
+						@include td-screen {
+							margin-top: 19px;
+						}
+						@include mob--screen {
+							display: none;
+						}
+					}
+					> ul {
+						display: flex;
+						gap: 10px;
+						flex-wrap: wrap;
+						margin-top: 20px;
+						> li {
+							padding: 5px;
+							border: 1px solid $basic-color;
+							border-radius: 3px;
+							@include td-screen {
+								font-size: 15px;
+							}
+						}
+						@include td-screen {
+							gap: 7px;
+						}
+					}
+				}
+				.skillWrap {
+					.skillflexBox {
+						display: flex;
+						@include td-screen {
+							flex-wrap: wrap;
+							gap: 15px;
+						}
+						@include tablet-screen {
+							flex-direction: column;
+						}
+						> div {
+							width: 50%;
+							@include td-screen {
+								width: 100%;
+							}
+							@include tablet-screen {
+								width: fit-content;
+							}
+						}
+						h4.skillTit {
+							font-size: 18px;
+							color: #000000;
+							font-weight: 500;
+							font-family: "Pretendard";
+							margin-bottom: 12px;
+						}
 
-                        }
-                        + .skillflexBox {
-                            margin-top: 45px;
-                            @include td-screen {
-                                margin-top: 11px;
-                            }
-                        }
-                    }
-                }
-            }
-            > div {
-                @include tablet-screen {
-                    width: auto !important;
-                }
-            }
-        }
-    }
+						.skillList {
+							display: flex;
+							align-items: center;
+							gap: 18px;
+							@include mob--screen {
+								img {
+									max-height: 35px;
+								}
+							}
+							.iconbox {
+								img {
+									font-size: 0;
+									border-radius: 12px;
+									box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+								}
+							}
+							.scss {
+								img {
+									font-size: 0;
+									border-radius: 12px;
+									box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+								}
+							}
+						}
+						+ .skillflexBox {
+							margin-top: 45px;
+							@include td-screen {
+								margin-top: 11px;
+							}
+						}
+					}
+				}
+			}
+			> div {
+				@include tablet-screen {
+					width: auto !important;
+				}
+			}
+		}
+	}
 }
 
-// Experience 
+// Experience
 .Experience {
-    position: relative;
-    z-index: 3;
-    background-color: #ebf6ef;
-    height: auto;
-    .inner {
-        height: 1470px;
-        @include td-screen {
-            padding: 0 40px;
-        }
-        @include tablet-screen {
-            padding: 0 40px 80px 40px;
-            height: auto;
-        }
-        @include mob--screen {
-            padding: 0 15px 60px 15px;
-        }
-    }
-    .h2Sticky {
-        position: absolute;
-        width: 100%;
-        height: 942px;
-        top: 0;
-        left: 0;
-        padding-top: 125px;
-        @include tablet-screen {
-            position: relative;
-            top: 0;
-            height: auto;
-            margin-bottom: 80px;
-        }
-        @include mob--screen {
-            padding-top: 80px;
-            margin-bottom: 60px;
-        }
-    }
-    h2 {
-        position: sticky;
-        top: 130px;
-        text-align: center;
-        display: block;
-        width: fit-content;
-        margin: 0 auto;
-    }
-    .stickyFix {
-        height: 313px;
-        @include tablet-screen {
-            height: auto;
-        }
-    }
-    .experienSticky {
-        position: relative;
-        .stickyBox {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            @include tablet-screen {
-                position: unset;
-                height: auto !important;
-                + .stickyBox {
-                    margin-top: 50px;
-                }
-            }
-            &:first-child {
-                top: 235px;
-                height: 1170px;
-            }
-            &:nth-child(2) {
-                top: 695px;
-                height: 797px;
-                .experienceBox {
-                    top: 318px;
-                }
-            }
-            &:nth-child(3) {
-                top: 1160px;
-                padding-top: 5px;
-                @include tablet-screen {
-                    padding-top: 0;
-                }
-            }
-        }
-        .experienceBox {
-            position: sticky;
-            top: 230px;
-            z-index: 8;
-            margin: 0 auto;
-            max-width: 1300px;
-            height: 415px;
-            color: $basic-color;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            overflow: hidden;
-            font-size: 30px;
-            @include tablet-screen {
-                position: relative;
-                top: 0 !important;
-                height: auto;
-                border-radius: 15px;
-                padding: 0;
-            }
-            .boxInner {
-                width: 100%;
-                height: 100%;
-                .boxTit {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    background-color: #f6f6f6;
-                    padding: 0 30px;
-                    height: 95px;
-                    border-bottom: 1px solid #000000;
-                    @include tablet-screen  {
-                        height: 90px;
-                        padding: 0 20px;
-                    }
-                    h3 {
-                        font-family: 'Pretendard';
-                        color: #000000;
-                        font-weight: 600;
-                        font-size: 25px;
-                        > .year {
-                            font-size: 20px;
-                            font-weight: 500;
-                            color: #666666;
-                            @include tablet-screen {
-                                font-size: 16px;
-                            }
-                            @include mob--screen {
-                                display: block;
-                                font-size: 14px;
-                                margin-top: 7px;
-                            }
-                        } 
-                        @include tablet-screen {
-                            font-size: 20px;
-                        }
-                        // @include mob--screen {
-                        //     font-size: 20px;
-                        // }
-                    }
-                    p {
-                        font-size: 19px;
-                        color: #333333;
-                        font-weight: 500;
-                        margin-top: 10px;
-                        @include tablet-screen {
-                            font-size: 18px;
-                        }
-                        @include mob--screen {
-                            font-size: 14px;
-                            margin-top: 7px;
-                        }
-                    }
-                }
-                .projectCon {
-                    display: flex;
-                    height: calc(100% - 95px);
-                    .project {
-                        width: 50%;
-                        height: 100%;
-                        @include tablet-screen {
-                            width: 100%;
-                            + .project {
-                                padding-top: 0;
-                            }
-                        }
-                    }
-                    @include tablet-screen {
-                        flex-direction: column;
-                        gap: 0;
-                    }
-                }
-                .project {
-                    height: calc(100% - 95px);
-                    padding: 30px 50px;
-                    background-color: #fff;
-                    @include tablet-screen {
-                        padding: 30px 20px;
-                    }
-                    h3 {
-                        font-size: 24px;
-                        margin-bottom: 15px;
-                        font-weight: 600;
-                        color: #333333;
-                        > span {
-                            font-size: 18px;
-                            font-weight: 500;
-                            @include tablet-screen {
-                                font-size: 15px;
-                            }
-                            @include mob--screen {
-                                font-size: 14px;
-                            }
-                        }
-                        @include tablet-screen {
-                            font-size: 18px;
-                        }
-                        @include mob--screen {
-                            font-size: 17px;
-                            margin-bottom: 10px;
-                        }
-                    }
-                    .viewBtn {
-                        color: #666666;
-                        font-weight: 500;
-                        font-size: 18px;
-                        .fa-paste {
-                            margin-right: 5px;
-                        }
-                        @include tablet-screen {
-                            font-size: 14px;
-                        }
-                        @include mob--screen {
-                            font-size: 13px;
-                        }
-                    }
-                }
-                .projectList {
-                    padding-top: 4px;
-                    height: 215px;
-                    overflow-y: auto;
-                    &::-webkit-scrollbar  {
-                        width: 5px;
-                    }
-                    &::-webkit-scrollbar-thumb {
-                        height: 30%; 
-                        background: #ddd;
-                        border-radius: 10px;
-                    }
-                    &::-webkit-scrollbar-track {
-                        background: transparent; 
-                    }
-                    @include tablet-screen {
-                        height: 147px;
-                    }
-                    > li {
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        position: relative;
-                        font-size: 19px;
-                        font-weight: 500;
-                        color: #000000;
-                        padding-left: 12px;
-                        padding-right: 10px;
-                        padding-bottom: 10px;
-                        @include tablet-screen {
-                            padding-bottom: 7px;
-                        }
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: 7px;
-                            left: 1px;
-                            width: 4px;
-                            height: 4px;
-                            border-radius: 100%;
-                            background-color: #000000;
-                        }
-                        &:not(:last-child) {
-                            margin-bottom: 10px;
-                            border-bottom: 1px solid #dddddd;
-                            @include tablet-screen {
-                                margin-bottom: 7px;
-                            }
-                        }
-                        >span:first-child {
-                            @include one-line($width: calc(100% - 120px));
-                            line-height: 1.2;
-                            @include tablet-screen {
-                                font-size: 15px;
-                                @include one-line($width: calc(100% - 85px));
-                            }
-                        }
-                        .Internal {
-                            flex-shrink: 0;
-                            color: #666666;
-                            font-size: 18px;
-                            // margin-right: 23px;
-                            font-weight: 500;
-                            @include tablet-screen {
-                                font-size: 14px;
-                            }
-                            @include mob--screen {
-                                font-size: 13px;
-                            }
-                        }
-                        .siteView {
-                            flex-shrink: 0;
-                            color: #666666;
-                            font-size: 18px;
-                            font-weight: 500;
-                            > span {
-                                position: relative;
-                                padding-right: 21px;
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    top: 2px;
-                                    right: 1px;
-                                    width: 14px;
-                                    height: 13px;
-                                    font-size: 13px;
-                                    background: url('../../images/main/goArrow.png') no-repeat center/cover;
-                                }
-                            }
-                            @include tablet-screen {
-                                font-size: 14px;
-                            }
-                            @include mob--screen {
-                                font-size: 13px;
-                            }
-                        }
-                        .maintenanceDetails {
-                            position: absolute;
-                            z-index: 2;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: auto;
-                            padding: 20px 20px;
-                            background-color: #F7F2E0;
-                            color: #000;
-                            @include mob--screen {
-                                padding: 15px 10px;
-                            }
-                            > div {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                margin-bottom: 10px;
-                                > h4 {
-                                    font-size: 17px;
-                                }
-                                .closeBtn {
-                                    font-size: 20px;
-                                    margin-bottom: 2px;
-                                }
-                            }
-                            .list {
-                                > li {
-                                    position: relative;
-                                    padding-left: 10px;
-                                    line-height: 1.2;
-                                    @include mob--screen {
-                                        font-size: 14px;
-                                    }
-                                 + li {
-                                    margin-top: 5px;
-                                 }   
-                                 &::before {
-                                    content: '';
-                                    position: absolute;
-                                    top: 7px;
-                                    left: 0;
-                                    width: 4px;
-                                    height: 4px;
-                                    background-color: #000;
-                                    border-radius: 100%;
-                                 }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        > .experienceBox:first-child .projectList {
-            height: auto;
-        }
-    }
-    
+	position: relative;
+	z-index: 3;
+	background-color: #ebf6ef;
+	height: auto;
+	.inner {
+		height: 1470px;
+		@include td-screen {
+			padding: 0 40px;
+		}
+		@include tablet-screen {
+			padding: 0 40px 80px 40px;
+			height: auto;
+		}
+		@include mob--screen {
+			padding: 0 15px 60px 15px;
+		}
+	}
+	.h2Sticky {
+		position: absolute;
+		width: 100%;
+		height: 942px;
+		top: 0;
+		left: 0;
+		padding-top: 125px;
+		@include tablet-screen {
+			position: relative;
+			top: 0;
+			height: auto;
+			margin-bottom: 80px;
+		}
+		@include mob--screen {
+			padding-top: 80px;
+			margin-bottom: 60px;
+		}
+	}
+	h2 {
+		position: sticky;
+		top: 130px;
+		text-align: center;
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+	}
+	.stickyFix {
+		height: 313px;
+		@include tablet-screen {
+			height: auto;
+		}
+	}
+	.experienSticky {
+		position: relative;
+		.stickyBox {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			@include tablet-screen {
+				position: unset;
+				height: auto !important;
+				+ .stickyBox {
+					margin-top: 50px;
+				}
+			}
+			&:first-child {
+				top: 235px;
+				height: 1170px;
+			}
+			&:nth-child(2) {
+				top: 695px;
+				height: 797px;
+				.experienceBox {
+					top: 318px;
+				}
+			}
+			&:nth-child(3) {
+				top: 1160px;
+				padding-top: 5px;
+				@include tablet-screen {
+					padding-top: 0;
+				}
+			}
+		}
+		.experienceBox {
+			position: sticky;
+			top: 230px;
+			z-index: 8;
+			margin: 0 auto;
+			max-width: 1300px;
+			height: 415px;
+			color: $basic-color;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			font-size: 30px;
+			@include tablet-screen {
+				position: relative;
+				top: 0 !important;
+				height: auto;
+				border-radius: 15px;
+				padding: 0;
+			}
+			.boxInner {
+				width: 100%;
+				height: 100%;
+				.boxTit {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					background-color: #f6f6f6;
+					padding: 0 30px;
+					height: 95px;
+					border-bottom: 1px solid #000000;
+					@include tablet-screen {
+						height: 90px;
+						padding: 0 20px;
+					}
+					h3 {
+						font-family: "Pretendard";
+						color: #000000;
+						font-weight: 600;
+						font-size: 25px;
+						> .year {
+							font-size: 20px;
+							font-weight: 500;
+							color: #666666;
+							@include tablet-screen {
+								font-size: 16px;
+							}
+							@include mob--screen {
+								display: block;
+								font-size: 14px;
+								margin-top: 7px;
+							}
+						}
+						@include tablet-screen {
+							font-size: 20px;
+						}
+						// @include mob--screen {
+						//     font-size: 20px;
+						// }
+					}
+					p {
+						font-size: 19px;
+						color: #333333;
+						font-weight: 500;
+						margin-top: 10px;
+						@include tablet-screen {
+							font-size: 18px;
+						}
+						@include mob--screen {
+							font-size: 14px;
+							margin-top: 7px;
+						}
+					}
+				}
+				.projectCon {
+					display: flex;
+					height: calc(100% - 95px);
+					.project {
+						width: 50%;
+						height: 100%;
+						@include tablet-screen {
+							width: 100%;
+							+ .project {
+								padding-top: 0;
+							}
+						}
+					}
+					@include tablet-screen {
+						flex-direction: column;
+						gap: 0;
+					}
+				}
+				.project {
+					height: calc(100% - 95px);
+					padding: 30px 50px;
+					background-color: #fff;
+					@include tablet-screen {
+						padding: 30px 20px;
+					}
+					h3 {
+						font-size: 24px;
+						margin-bottom: 15px;
+						font-weight: 600;
+						color: #333333;
+						> span {
+							font-size: 18px;
+							font-weight: 500;
+							@include tablet-screen {
+								font-size: 15px;
+							}
+							@include mob--screen {
+								font-size: 14px;
+							}
+						}
+						@include tablet-screen {
+							font-size: 18px;
+						}
+						@include mob--screen {
+							font-size: 17px;
+							margin-bottom: 10px;
+						}
+					}
+					.viewBtn {
+						color: #666666;
+						font-weight: 500;
+						font-size: 18px;
+						.fa-paste {
+							margin-right: 5px;
+						}
+						@include tablet-screen {
+							font-size: 14px;
+						}
+						@include mob--screen {
+							font-size: 13px;
+						}
+					}
+				}
+				.projectList {
+					padding-top: 4px;
+					height: 215px;
+					overflow-y: auto;
+					&::-webkit-scrollbar {
+						width: 5px;
+					}
+					&::-webkit-scrollbar-thumb {
+						height: 30%;
+						background: #ddd;
+						border-radius: 10px;
+					}
+					&::-webkit-scrollbar-track {
+						background: transparent;
+					}
+					@include tablet-screen {
+						height: 147px;
+					}
+					> li {
+						position: relative;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						position: relative;
+						font-size: 19px;
+						font-weight: 500;
+						color: #000000;
+						padding-left: 12px;
+						padding-right: 10px;
+						padding-bottom: 10px;
+						@include tablet-screen {
+							padding-bottom: 7px;
+						}
+						&::after {
+							content: "";
+							position: absolute;
+							top: 7px;
+							left: 1px;
+							width: 4px;
+							height: 4px;
+							border-radius: 100%;
+							background-color: #000000;
+						}
+						&:not(:last-child) {
+							margin-bottom: 10px;
+							border-bottom: 1px solid #dddddd;
+							@include tablet-screen {
+								margin-bottom: 7px;
+							}
+						}
+						> span:first-child {
+							@include one-line($width: calc(100% - 120px));
+							line-height: 1.2;
+							@include tablet-screen {
+								font-size: 15px;
+								@include one-line($width: calc(100% - 85px));
+							}
+						}
+						.Internal {
+							flex-shrink: 0;
+							color: #666666;
+							font-size: 18px;
+							// margin-right: 23px;
+							font-weight: 500;
+							@include tablet-screen {
+								font-size: 14px;
+							}
+							@include mob--screen {
+								font-size: 13px;
+							}
+						}
+						.siteView {
+							flex-shrink: 0;
+							color: #666666;
+							font-size: 18px;
+							font-weight: 500;
+							> span {
+								position: relative;
+								padding-right: 21px;
+								&::after {
+									content: "";
+									position: absolute;
+									top: 2px;
+									right: 1px;
+									width: 14px;
+									height: 13px;
+									font-size: 13px;
+									background: url("../../images/main/goArrow.png") no-repeat center/cover;
+								}
+							}
+							@include tablet-screen {
+								font-size: 14px;
+							}
+							@include mob--screen {
+								font-size: 13px;
+							}
+						}
+						.maintenanceDetails {
+							position: absolute;
+							z-index: 2;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: auto;
+							padding: 20px 20px;
+							background-color: #f7f2e0;
+							color: #000;
+							@include mob--screen {
+								padding: 15px 10px;
+							}
+							> div {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								margin-bottom: 10px;
+								> h4 {
+									font-size: 17px;
+								}
+								.closeBtn {
+									font-size: 20px;
+									margin-bottom: 2px;
+								}
+							}
+							.list {
+								> li {
+									position: relative;
+									padding-left: 10px;
+									line-height: 1.2;
+									@include mob--screen {
+										font-size: 14px;
+									}
+									+ li {
+										margin-top: 5px;
+									}
+									&::before {
+										content: "";
+										position: absolute;
+										top: 7px;
+										left: 0;
+										width: 4px;
+										height: 4px;
+										background-color: #000;
+										border-radius: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		> .experienceBox:first-child .projectList {
+			height: auto;
+		}
+	}
 }
-
 
 // portfolio
 .Portfolio {
-    position: relative;
-    background-color: $bg-color1;
-    min-height: 700px;
-    padding-top: 170px;
-    padding-bottom: 140px;
+	position: relative;
+	background-color: $bg-color1;
+	min-height: 700px;
+	padding-top: 170px;
+	padding-bottom: 140px;
 
-    @include tablet-screen {
-        padding-top: 80px;
-    }
-    @include mob--screen {
-        padding-top: 55px;
-        padding-bottom: 55px;
-    }
+	@include tablet-screen {
+		padding-top: 80px;
+	}
+	@include mob--screen {
+		padding-top: 55px;
+		padding-bottom: 55px;
+	}
 
-    .inner {
-        max-width: 1300px;
-        margin: 0 auto;
-        @include td-screen {
-            padding: 0 40px;
-        }
-        @include mob--screen {
-            padding: 0 15px;
-        }
-        .portWrap {
-            display: flex;
-            align-items: flex-start;
-            @include tablet-screen {
-                flex-direction: column;
-                align-items: center;
-            }
-            .porfolioText {
-                position: sticky;
-                top: 40%;
-                width: 550px;
-                flex-shrink: 0;
-                @include td-screen {
-                    width: 500px;
-                }
-                @include tablet-screen {
-                    top: 0;
-                    position: relative;
-                    z-index: 1;
-                    width: 100%;
-                }
-                h2 {
-                    display: inline-block;
-                    position: relative;
-                    margin-bottom: 0;
-                    > span {
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: 100%;
-                            right: -48px;
-                            width: 45px;
-                            height: 2px;
-                            background-color: $basic-color;
-                            animation: baropa 0.4s infinite both alternate;
-                            @include mob--screen {
-                                width: 25px;
-                                right: -30px;
-                            }
-                        }
-
-                    }
-                }
-                @keyframes baropa {
-                    0% {
-                        opacity: 0;
-                    }
-                    100% {
-                        opacity: 1;
-                    }
-                }
-                p {
-                    font-size: 20px;
-                    line-height: 1.6;
-                    margin-top: 50px;
-                    @include mob--screen  {
-                        font-size: 15px;
-                        line-height: 1.3;
-                        margin-top: 25px;
-                        > br {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            .portfolioList {
-                width: calc(100% - 500px);
-                @include tablet-screen  {
-                    width: 100%;
-                    margin-top: 50px;
-                }
-                @include mob--screen  {
-                    margin-top: 25px;
-                }
-                > ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    @include mob--screen  {
-                        width: 100%;
-                        gap: 10px;
-                    }
-                    > li {
-                        position: relative;
-                        z-index: 3;
-                        width: calc(50% - 10px);
-                        @include mob--screen  {
-                            width: 100%;
-                        }
-                        .thumImg {
-                            width: 100%;
-                            overflow: hidden;
-                            height: 252.5px;
-                            border: 1px solid #ccc;
-                            img {
-                                display: block;
-                                height: 100%;
-                                transition: all 0.4s;
-                                transform: scale(1);
-                                @include td-screen {
-                                    width: 100%;
-                                    height: auto;
-                                }
-                            }
-                            &:hover img {
-                                transform: scale(1.1);
-                            }
-                            @include td-screen {
-                                width: 100%;
-                                height: auto;
-                            }
-                        }
-                        .thumTx {
-                            margin-top: 15px;
-                            text-align: center;
-                            > p {
-                                font-size: 18px;
-                                font-weight: 500;
-                                @include mob--screen  {
-                                    font-size: 17px;
-                                }
-                            }
-                        }
-                        + li {
-                            margin-top: 25px;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
+	.inner {
+		max-width: 1300px;
+		margin: 0 auto;
+		@include td-screen {
+			padding: 0 40px;
+		}
+		@include mob--screen {
+			padding: 0 15px;
+		}
+		.portWrap {
+			display: flex;
+			align-items: flex-start;
+			@include tablet-screen {
+				flex-direction: column;
+				align-items: center;
+			}
+			.porfolioText {
+				position: sticky;
+				top: 40%;
+				width: 550px;
+				flex-shrink: 0;
+				@include td-screen {
+					width: 500px;
+				}
+				@include tablet-screen {
+					top: 0;
+					position: relative;
+					z-index: 1;
+					width: 100%;
+				}
+				h2 {
+					display: inline-block;
+					position: relative;
+					margin-bottom: 0;
+					> span {
+						&::after {
+							content: "";
+							position: absolute;
+							top: 100%;
+							right: -48px;
+							width: 45px;
+							height: 2px;
+							background-color: $basic-color;
+							animation: baropa 0.4s infinite both alternate;
+							@include mob--screen {
+								width: 25px;
+								right: -30px;
+							}
+						}
+					}
+				}
+				@keyframes baropa {
+					0% {
+						opacity: 0;
+					}
+					100% {
+						opacity: 1;
+					}
+				}
+				p {
+					font-size: 20px;
+					line-height: 1.6;
+					margin-top: 50px;
+					@include mob--screen {
+						font-size: 15px;
+						line-height: 1.3;
+						margin-top: 25px;
+						> br {
+							display: none;
+						}
+					}
+				}
+			}
+			.portfolioList {
+				width: calc(100% - 500px);
+				@include tablet-screen {
+					width: 100%;
+					margin-top: 50px;
+				}
+				@include mob--screen {
+					margin-top: 25px;
+				}
+				> ul {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 20px;
+					@include mob--screen {
+						width: 100%;
+						gap: 10px;
+					}
+					> li {
+						position: relative;
+						z-index: 3;
+						width: calc(50% - 10px);
+						@include mob--screen {
+							width: 100%;
+						}
+						.thumImg {
+							width: 100%;
+							overflow: hidden;
+							height: 252.5px;
+							border: 1px solid #ccc;
+							img {
+								display: block;
+								height: 100%;
+								transition: all 0.4s;
+								transform: scale(1);
+								@include td-screen {
+									width: 100%;
+									height: auto;
+								}
+							}
+							&:hover img {
+								transform: scale(1.1);
+							}
+							@include td-screen {
+								width: 100%;
+								height: auto;
+							}
+						}
+						.thumTx {
+							margin-top: 15px;
+							text-align: center;
+							> p {
+								font-size: 18px;
+								font-weight: 500;
+								@include mob--screen {
+									font-size: 17px;
+								}
+							}
+						}
+						+ li {
+							margin-top: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -5,21 +5,14 @@ interface PortfoliopageProps {
 	item: WorkContentItem;
 }
 
-const Nhopensource: React.FC<PortfoliopageProps> = () => (
+const NiceBizinfo: React.FC<PortfoliopageProps> = () => (
 	<div className="modalContent">
-		<div className="projectImage">
-			<img src="/assets/images/main/nhopengifImage1.gif" alt="프로젝트 화면 이미지" />
-		</div>
 		<div className="introText">
 			<p>
-				금융권과 같은 업계의 철저한 보안성과 안정성을 위해 외부망에 대한 규제가 엄격하게 이루어집니다.
-				<br />
-				때문에 우리가 외부에서 정말 손쉽게 구할 수 있는 정보, 검색, 다양한 웹 브라우저 , 라이브러리 , 프레임워크
-				등 내부로의
-				<br />
-				반입이 제한이 걸립니다. 정말 필요한 경우의 문서 및 파일의 경우 철저한 절차를 통하여 내부로의 반입이
-				이루어지는데 '오픈소스관리포털'은 이를 좀 더 체계적이면서 효울적으로 절차를 진행하고자 취지에서 만들어진
-				내부 시스템입니다.
+				기업 관련 분석 보고서, 재무제표, 기업 신용 등 사업자 관련 정보를 손쉽게 검색하고 열람할 수 있도록 하며,
+				보고서 구매 서비스를 일원화하여 제공합니다. 최신 UI/UX 트렌드를 반영한 웹사이트를 구축함으로써 사용자의
+				구매 경험을 향상시키고, 이를 통해 가치를 창출하여 클라이언트에게 효과적인 서비스를 제공하는 것을 목표로
+				합니다.
 			</p>
 		</div>
 		<p className="causeText">* 프로젝트 보안상 코드공개가 어려운 점 양해부탁드립니다.</p>
@@ -27,7 +20,7 @@ const Nhopensource: React.FC<PortfoliopageProps> = () => (
 			<h3 className="contentTit">특징</h3>
 			<ul className="listStyle1">
 				<li>
-					프론트단 100% 개인구축
+					Quasar 프레임워크 채택
 					<ul className="listStyle2">
 						<li>
 							프로젝트 인원 중 화면단에 대한 작업이 가능한 사람이 혼자였기 때문에 모든 페이지의
@@ -67,8 +60,8 @@ const Nhopensource: React.FC<PortfoliopageProps> = () => (
 		<div className="skill content">
 			<h3 className="contentTit">사용된 기술</h3>
 			<ul className="skillTree">
-				<li>Vue3</li>
-				<li>Vite</li>
+				<li>Nuxt3</li>
+				<li>Quasar</li>
 				<li>TypeScript</li>
 				<li>Scss</li>
 			</ul>
@@ -93,4 +86,4 @@ const Nhopensource: React.FC<PortfoliopageProps> = () => (
 	</div>
 );
 
-export default Nhopensource;
+export default NiceBizinfo;
