@@ -51,7 +51,7 @@ export default function Experience() {
 						<div className="careerBox">
 							<div className="titBox">
 								<h4 className="companyTit">(주)프로젝트 독</h4>
-								<span className="year">2021.01 - 2021.07</span>
+								<span className="year">2021.01 - 2021.08</span>
 							</div>
 							<div className="titBox2">
 								<p className="positionTit">개발팀 / 사원</p>
